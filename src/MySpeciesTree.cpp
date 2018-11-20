@@ -2202,9 +2202,7 @@ vector<int> MySpeciesTree::computeSpeciesCladesAndSplitsAux(
             childClades.push_back( idX );
         } // else marked, return child clades
     }
-
-    // this is another github test...
-
+    
     return childClades;
 }
 
