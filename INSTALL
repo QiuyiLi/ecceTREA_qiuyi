@@ -1,0 +1,25 @@
+Celine Scornavacca	25/07/2018
+
+========== SETUP =======================================
+Download ecceTERA from https://github.com/celinescornavacca/ecceTERA.git.
+
+Executables for Mac and Linux (64-bit) are available in the bin directory.
+
+Alternatively, ecceTERA can be built from the source code (see below).
+
+=========== INSTALLATION FROM SOURCE CODE =========================
+
+REQUIREMENTS
+1. ecceTERA download (https://github.com/celinescornavacca/ecceTERA.git)
+2. cmake (http://cmake.org/download/)
+
+
+BUILDING
+1. Extract the ecceTERA download.
+2. cmake .
+3. make
+
+To use a g++ compiler instead of c++, append the following to the cmake command line:
+-DCMAKE_CXX_COMPILER=/usr/bin/g++ 
+
+
