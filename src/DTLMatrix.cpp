@@ -316,30 +316,7 @@ void DTLMatrix::computeDuplicationCost(
         UPDATE_OPT( optCost, bestSplit, cost, state.idX, state.idX, 'd' );
     }
 }
-/*
-void DTLMatrix::countIlsBranches()
-{
-    int tsStart = 1;
-    int tsEnd = mMaxTS;
-    int currentIdX = -1;
-    vector< int > speciesNodeIdsTS;
-    vector< int > idX;
-    vector< pair<int,int> > currentIlsSplit; 
-    vector< vector< pair<int,int> > > ilsSplits;
-    MySpeciesNode *node;
-    int branchCount = 0;
-    for( int ts=tsStart; ts<=tsEnd; ts++ ){
-        speciesNodeIdsTS = mSpeciesTree->getVectorWithTS( ts );
-        for(int i=0; i<speciesNodeIdsTS.size()){
-            currentIdX = speciesNodeIdsTS[i];
-            currentIlsSplit = mSpeciesTree->getIlsSplits( currentIdX );
-            
-            mIlsSplits
-            mCorrespondence
-        }
-    }
-}
-*/
+
 
 /**
  * Compute the speciation cost for the current split.
@@ -355,54 +332,6 @@ void DTLMatrix::computeSpeciationCost(
         BestSplit &bestSplit ) ///< current best split
 {
     EventTriplet eventTrip;
-    //vector<int> set;
-    //set->push_back(idXl);
-    //set->push_back(idXr);
-    //lca = LCA(set)->getId();
-    // vector<int> mTimeSlices = mSpeciesTree->getTimeSlices();
-    // int fatherTS = mTimeSlices[idXl]+1;
-    // vector< int > speciesNodeIdsTS = mSpeciesTree->getVectorWithTS( fatherTS );
-    // int idXa = -1;
-    // int idXb = -1;
-    // pair<int,int> targetSplit;
-    // double otherCosts = costThisSplit;
-    // cout << "123" << endl;
-
-    //check if there is a node X1 having only one son Xl,
-    //and X2 having only one son Xr,
-    // BOOST_FOREACH( int id, speciesNodeIdsTS ){
-    //     // cout << id << endl;
-
-    //     pair<int,int> split; // assume binary, otherwise vector of pairs
-
-    //     // leaves do not have splits
-    //     if (mSpeciesTree->getSplits(id).size()) {
-    //         split = mSpeciesTree->getSplits(id)[0]; // assume binary
-    //     } else { 
-    //         continue;
-    //     }
-
-    //     // cout << split.first << split.second << endl;
-    //     // find corresponding ils clades: same leaf set with ts+1
-    //     if(split.first == idXl && split.second == -1){
-    //         idXa = id;
-    //     }
-    //     if(split.first == idXr && split.second == -1){
-    //         idXb = id;
-    //     }
-    //     if(idXa != -1 && idXb != -1) break;
-    // }
-    // if(idXa != -1 && idXb != -1) {
-    //     targetSplit.first = idXa;
-    //     targetSplit.second = idXb;
-    //     //check if (Xa,Xb) is an ils split
-
-
-
-    //     otherCosts = costThisSplit + mIlsCost;
-    // }
-    
-    
 
     // Cospeciation impossible in Alpha, c2 Cospeciation
     double cost = computeCostList( costThisSplit,
@@ -440,31 +369,31 @@ void DTLMatrix::computeIlsCost(
 
         vector<int> ilsClade;
         vector<int> ilsClade_l = cost_trip[idXl];
-        cout << "a--------------" << endl;
-        cout << "ilsClade_l: " << endl;
-        BOOST_FOREACH( int leaf, ilsClade_l )
-            cout << leaf << endl;
-        cout << "b--------------" << endl;
+        // degugging
+        // cout << "--------------" << endl;
+        // cout << "ilsClade_l: " << endl;
+        // BOOST_FOREACH( int leaf, ilsClade_l )
+        //     cout << leaf << endl;
+        // cout << "--------------" << endl;
         vector<int> ilsClade_r = cost_trip[idXr];
-        cout << "ilsClade_r: " << endl;
-        BOOST_FOREACH( int leaf, ilsClade_r )
-            cout << leaf << endl;
-        cout << "c--------------" << endl;
+        // cout << "ilsClade_r: " << endl;
+        // BOOST_FOREACH( int leaf, ilsClade_r )
+        //     cout << leaf << endl;
+        // cout << "--------------" << endl;
         ilsClade = ilsClade_l;
         BOOST_FOREACH( int leaf, ilsClade_r )
             ilsClade.push_back( leaf );
-            cout << "ilsClade: " << endl;
-        BOOST_FOREACH( int leaf, ilsClade )
-            cout << leaf << endl;
-        cout << "d--------------" << endl;
+        // cout << "ilsClade: " << endl;
+        // BOOST_FOREACH( int leaf, ilsClade )
+        //     cout << leaf << endl;
+        // cout << "--------------" << endl;
 
 
         int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r);
-        cout << "123" << endl;
-        cout << ilsUnits << endl;
+        // debugging
+        // cout << ilsUnits << endl;
 
-    // int ilsUnits = 3;
-    double otherCosts = costThisSplit + mIlsCost * ilsUnits;
+    double otherCosts = costThisSplit + mIlsCost * (ilsUnits - 1);
 
     // Cospeciation impossible in Alpha, c2 Cospeciation
     double cost = computeCostList( otherCosts,
