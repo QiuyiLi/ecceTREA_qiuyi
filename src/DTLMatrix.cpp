@@ -2842,6 +2842,7 @@ void DTLMatrix::createVertices(
         // fake ILS nodes collapse to the real parent.
         vector< pair<int,int> > ilsSplits 
                                 = mSpeciesTree->getIlsSplits( idX );
+        vector< vector<int> > cost_trip = mSpeciesTree->mapSpeciesIdToClades(); // qy
         for( size_t i=0; i<ilsSplits.size(); i++ ) {
             if( ilsSplits[i].second == -1 ) {
                 addVertices( graph, pairVertex, qList, idU, ilsSplits[i].first,
@@ -2849,12 +2850,20 @@ void DTLMatrix::createVertices(
             } else { 
                 // ILS
                 if( cladeSplit.first != -1 ) {
+                    vector<int> ilsClade; // qy
+                    vector<int> ilsClade_l = cost_trip[ilsSplits[i].first];
+                    vector<int> ilsClade_r = cost_trip[ilsSplits[i].second];
+                    ilsClade = ilsClade_l;
+                    BOOST_FOREACH( int leaf, ilsClade_r )
+                    ilsClade.push_back( leaf ); // qy
+
+                    int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r) - 1;
                     addVertices( graph, pairVertex, qList, cladeSplit.first, 
                             ilsSplits[i].first, cladeSplit.second, 
-                            ilsSplits[i].second, "I", cost, mIlsCost, trip );
+                            ilsSplits[i].second, "I", cost, mIlsCost*ilsUnits, trip );
                     addVertices( graph, pairVertex, qList, cladeSplit.first, 
                             ilsSplits[i].second, cladeSplit.second,
-                            ilsSplits[i].first, "I", cost, mIlsCost, trip );
+                            ilsSplits[i].first, "I", cost, mIlsCost*ilsUnits, trip );
                 }
 
                 // ILS + loss
