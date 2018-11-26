@@ -343,6 +343,36 @@ void DTLMatrix::computeSpeciationCost(
     UPDATE_OPT( optCost, bestSplit, cost, idXr, idXl, 's' );
 }
 
+
+vector<int> cladeSortUnion(
+    vector<int> setA,
+    vector<int> setB)
+{
+    vector<int> unionSort;
+    int i = 0;
+    int j = 0;
+    while ( i<setA.size() && j<setB.size() ){
+        // cout << i << endl;
+        if(setA[i] < setB[j]){
+            unionSort.push_back(setA[i]);
+            i++;
+        }
+        else{
+            unionSort.push_back(setB[j]);
+            j++;
+        }  
+    }
+    while(i<setA.size()){
+        unionSort.push_back(setA[i]);
+        i++;
+    }
+    while(j<setB.size()){
+        unionSort.push_back(setB[j]);
+        j++;
+    }
+    return unionSort;
+}
+
 /**
  * Compute the ils cost for the current split.
  */
@@ -380,9 +410,20 @@ void DTLMatrix::computeIlsCost(
         // BOOST_FOREACH( int leaf, ilsClade_r )
         //     cout << leaf << endl;
         // cout << "--------------" << endl;
-        ilsClade = ilsClade_l;
-        BOOST_FOREACH( int leaf, ilsClade_r )
-            ilsClade.push_back( leaf );
+
+        // cout << setB.size() << endl;
+        // BOOST_FOREACH(int leaf, ilsClade){
+        //         cout << leaf << " ";
+        // }
+        // cout << "\n-----------------" << endl;
+        ilsClade = cladeSortUnion(ilsClade_l, ilsClade_r);
+
+
+
+        // ilsClade = ilsClade_l;
+
+        // BOOST_FOREACH( int leaf, ilsClade_r )
+        //     ilsClade.push_back( leaf );
         // cout << "ilsClade: " << endl;
         // BOOST_FOREACH( int leaf, ilsClade )
         //     cout << leaf << endl;
@@ -2853,11 +2894,12 @@ void DTLMatrix::createVertices(
                     vector<int> ilsClade; // qy
                     vector<int> ilsClade_l = cost_trip[ilsSplits[i].first];
                     vector<int> ilsClade_r = cost_trip[ilsSplits[i].second];
-                    ilsClade = ilsClade_l;
-                    BOOST_FOREACH( int leaf, ilsClade_r )
-                    ilsClade.push_back( leaf ); // qy
-
+                    ilsClade = cladeSortUnion(ilsClade_l, ilsClade_r);
+                    // ilsClade = ilsClade_l; // note
+                    // BOOST_FOREACH( int leaf, ilsClade_r )
+                    // ilsClade.push_back( leaf ); // qy
                     int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r) - 1;
+                    
                     addVertices( graph, pairVertex, qList, cladeSplit.first, 
                             ilsSplits[i].first, cladeSplit.second, 
                             ilsSplits[i].second, "I", cost, mIlsCost*ilsUnits, trip );

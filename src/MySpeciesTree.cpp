@@ -1951,24 +1951,76 @@ int MySpeciesTree::processClades(
 
 
 // compute intersection of 2 clade sets
+// vector<int> cladeIntersect_1(
+//     vector<int> setA,
+//     vector<int> setB)
+// {
+//     vector<int> intersect;
+//     // cout << setB.size() << endl;
+//     for ( int i=0; i<setA.size(); i++ ){
+//         // cout << i << endl;
+//         for ( int j=0; j<setB.size(); j++ ){
+//             // cout << j << endl;
+//             if (setA[i] == setB[j])
+//             intersect.push_back(setA[i]);
+//         }
+//     }
+//     return intersect;
+// }
+
+
+// compute intersection of 2 clade sets faster
 vector<int> cladeIntersect(
     vector<int> setA,
     vector<int> setB)
 {
     vector<int> intersect;
     // cout << setB.size() << endl;
-    for ( int i=0; i<setA.size(); i++ ){
+    int i = 0;
+    int j = 0;
+    while ( i<setA.size() && j<setB.size() ){
         // cout << i << endl;
-        for ( int j=0; j<setB.size(); j++ ){
-            // cout << j << endl;
-            if (setA[i] == setB[j])
+        if (setA[i] == setB[j]){
             intersect.push_back(setA[i]);
+            i++;
+            j++;
         }
+        else if(setA[i] < setB[j]){
+            i++;
+        }
+        else j++;
     }
     return intersect;
 }
 
-
+vector<int> cladeSortUnion_2(
+    vector<int> setA,
+    vector<int> setB)
+{
+    vector<int> unionSort;
+    int i = 0;
+    int j = 0;
+    while ( i<setA.size() && j<setB.size() ){
+        // cout << i << endl;
+        if(setA[i] < setB[j]){
+            unionSort.push_back(setA[i]);
+            i++;
+        }
+        else{
+            unionSort.push_back(setB[j]);
+            j++;
+        }  
+    }
+    while(i<setA.size()){
+        unionSort.push_back(setA[i]);
+        i++;
+    }
+    while(j<setB.size()){
+        unionSort.push_back(setB[j]);
+        j++;
+    }
+    return unionSort;
+}
 
 
 // creat a vector in which the i-th entry of the vector refers to
@@ -1988,8 +2040,9 @@ vector< vector<int> > MySpeciesTree::mapSpeciesIdToClades()
             Clades[id] = Clades_1;
             if(splits.second != -1){
                 vector<int> Clades_2 = Clades[splits.second];
-                BOOST_FOREACH( int leafId, Clades_2 ) 
-                    Clades[id].push_back(leafId); 
+                Clades[id] = cladeSortUnion_2(Clades_1, Clades_2);
+                // BOOST_FOREACH( int leafId, Clades_2 ) 
+                //     Clades[id].push_back(leafId); 
             }
         }
     } 
@@ -2005,9 +2058,10 @@ vector<int> MySpeciesTree::getIlsCladById(int ilsNodeId)
     vector<int> ilsClades;
     pair<int,int> ilsSplits = mIlsSplits[ilsNodeId][0];
     ilsClades = SpeciesNodeClade[ilsSplits.first];
-    BOOST_FOREACH( int leafId, SpeciesNodeClade[ilsSplits.second] ) {
-        ilsClades.push_back(leafId);
-    }
+    ilsClades = cladeSortUnion_2(SpeciesNodeClade[ilsSplits.first], SpeciesNodeClade[ilsSplits.second]);
+    // BOOST_FOREACH( int leafId, SpeciesNodeClade[ilsSplits.second] ) {
+    //     ilsClades.push_back(leafId);
+    // }
     return ilsClades;
 }
 
