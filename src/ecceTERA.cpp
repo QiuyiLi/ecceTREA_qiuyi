@@ -1426,6 +1426,7 @@ void makeGraph(
                 gBoolParams.find("internal.graph.ids")->second, false );
     }
 
+
     // get number of solutions
     bool notTooBig = graph.countReconciliationNumberAndCheck(
             inEps, 
