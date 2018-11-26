@@ -387,8 +387,9 @@ void DTLMatrix::computeIlsCost(
         BestSplit &bestSplit ) ///< current best split
 {
     EventTriplet eventTrip;
-        //vector< vector<int> > cost_temp = mSpeciesTree->getSpeciesNodeClade();
-        vector< vector<int> > cost_trip = mSpeciesTree->mapSpeciesIdToClades();
+        // mSpeciesTree->mapSpeciesIdToClades();
+        vector< vector<int> > cost_trip = mSpeciesTree->getSpeciesNodeClade();
+        // vector< vector<int> > cost_trip = mSpeciesTree->mapSpeciesIdToClades();
         // BOOST_FOREACH( vector<int> clades, cost_temp ){
         //     BOOST_FOREACH( int leaf, clades ){
         //         cout << leaf << " ";
@@ -486,7 +487,14 @@ void DTLMatrix::computeIlsPlusLossCost(
     EventTriplet eventTrip;
     eventTrip.l = 1;
 
-    double otherCosts = state.lossCost + mIlsCost;
+    vector< vector<int> > cost_trip = mSpeciesTree->getSpeciesNodeClade();
+    vector<int> ilsClade;
+    vector<int> ilsClade_l = cost_trip[idXl];
+    vector<int> ilsClade_r = cost_trip[idXr];
+    ilsClade = cladeSortUnion(ilsClade_l, ilsClade_r);
+    int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r);
+
+    double otherCosts = state.lossCost + mIlsCost*ilsUnits;
 
     // Cospeciation  + Loss impossible in Alpha
     //c3	Cospeciation + Loss
@@ -712,6 +720,7 @@ double DTLMatrix::computeOptimaForCell(
         int toCompute,  ///< bit index with costs to compute
         DTLMatrixState &state ) ///< various current info
 {
+    // mSpeciesTree->mapSpeciesIdToClades();
     // state variables in class
     state.idX = idX;
     //cout << state.idX <<" " << state.idU << endl;	
@@ -1674,6 +1683,8 @@ void DTLMatrix::calculateMatrix(
     int tsEnd )     ///< last time slice to calculate (default is -1 = mMaxTS).
 {
     clock_t start = clock();
+
+    mSpeciesTree->mapSpeciesIdToClades(); // qy
 
     if( epsilon != -1 ) {
         mEpsilon = epsilon;
@@ -2883,9 +2894,10 @@ void DTLMatrix::createVertices(
         // fake ILS nodes collapse to the real parent.
         vector< pair<int,int> > ilsSplits 
                                 = mSpeciesTree->getIlsSplits( idX );
-        vector< vector<int> > cost_trip = mSpeciesTree->mapSpeciesIdToClades(); // qy
+        int ilsUnits = 1;
+        vector< vector<int> > cost_trip = mSpeciesTree->getSpeciesNodeClade(); // qy
         for( size_t i=0; i<ilsSplits.size(); i++ ) {
-            if( ilsSplits[i].second == -1 ) {
+            if( ilsSplits[i].second == -1 ) { // not possible
                 addVertices( graph, pairVertex, qList, idU, ilsSplits[i].first,
                     "O", cost, 0, trip );
             } else { 
@@ -2898,7 +2910,7 @@ void DTLMatrix::createVertices(
                     // ilsClade = ilsClade_l; // note
                     // BOOST_FOREACH( int leaf, ilsClade_r )
                     // ilsClade.push_back( leaf ); // qy
-                    int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r) - 1;
+                    ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r) - 1;
                     
                     addVertices( graph, pairVertex, qList, cladeSplit.first, 
                             ilsSplits[i].first, cladeSplit.second, 
@@ -2911,10 +2923,10 @@ void DTLMatrix::createVertices(
                 // ILS + loss
                 addVertices( graph, pairVertex, qList, idU, 
                             ilsSplits[i].first, "IL", cost, 
-                            mLossCost+mIlsCost, trip );
+                            mLossCost+mIlsCost*ilsUnits, trip );
                 addVertices( graph, pairVertex, qList, idU, 
                              ilsSplits[i].second, "IL", cost, 
-                             mLossCost+mIlsCost, trip );
+                             mLossCost+mIlsCost*ilsUnits, trip );
             }
         }
     }
