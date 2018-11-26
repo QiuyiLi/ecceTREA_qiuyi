@@ -4,6 +4,5 @@ CMakeCache.txt
 .DS_Store
 bin
 *.o
-*.cpp.o
 *.make
 *.a
