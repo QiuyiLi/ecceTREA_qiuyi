@@ -3,6 +3,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 

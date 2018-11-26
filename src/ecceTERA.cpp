@@ -6,8 +6,9 @@
 @file ecceTERA.cpp
 @author Celine Scornavacca
 @author Edwin Jacox
-@version 1.2.4 
-@date 14/09/2016
+@author Qiuyi Li
+@version 1.2.5 
+@date 26/11/2018
 
 @section LICENCE
 Copyright or © or Copr. CNRS
