@@ -3,4 +3,4 @@ cmake_install.cmake
 CMakeCache.txt
 .DS_Store
 bin
-src/ext/bpp
+*.o
