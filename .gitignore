@@ -6,3 +6,8 @@ bin
 *.o
 *.make
 *.a
+Makefile
+*.cmake
+*.includecache
+*.txt
+*.internal
