@@ -334,6 +334,13 @@ void DTLMatrix::computeSpeciationCost(
 {
     EventTriplet eventTrip;
 
+    // double cost = 100;
+    // if (idUl == -1) {
+    //     cost = 100;
+    //     // UPDATE_OPT( optCost, bestSplit, cost, idXl, idXr, 's' );
+    //     // UPDATE_OPT( optCost, bestSplit, cost, idXl, idXr, 's' );
+    // }
+    // else{
     // Cospeciation impossible in Alpha, c2 Cospeciation
     double cost = computeCostList( costThisSplit,
                     idUl, idXl, idUr, idXr, eventTrip, state );
@@ -342,6 +349,7 @@ void DTLMatrix::computeSpeciationCost(
     cost = computeCostList( costThisSplit,
                     idUl ,idXr, idUr, idXl, eventTrip, state );
     UPDATE_OPT( optCost, bestSplit, cost, idXr, idXl, 's' );
+    
 }
 
 
@@ -458,14 +466,14 @@ void DTLMatrix::computeSpeciationPlusLossCost(
         DTLMatrixState &state, ///< various current info
         double &optCost, ///< current optimal cost
         BestSplit &bestSplit ) ///< current best split
-{ 
+{
     EventTriplet eventTrip;
     eventTrip.l = 1;
 
-    double otherCosts = state.lossCost;
+    double otherCosts = state.lossCost; // debugging
 
-    // Cospeciation  + Loss impossible in Alpha
-    //c3	Cospeciation + Loss
+    // Cospeciation + Loss impossible in Alpha
+    // c3	Cospeciation + Loss
     double cost = computeCostList( otherCosts, state.idU, idXl, 
                                     eventTrip, state );
     UPDATE_OPT( optCost, bestSplit, cost, idXl, -1, 'l' );
@@ -484,7 +492,7 @@ void DTLMatrix::computeIlsPlusLossCost(
         DTLMatrixState &state, ///< various current info
         double &optCost, ///< current optimal cost
         BestSplit &bestSplit ) ///< current best split
-{ 
+{
     EventTriplet eventTrip;
     eventTrip.l = 1;
 
@@ -495,31 +503,31 @@ void DTLMatrix::computeIlsPlusLossCost(
     ilsClade = cladeSortUnion(ilsClade_l, ilsClade_r);
     int ilsUnits = mSpeciesTree->ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r);
 
-    double otherCosts = state.lossCost + mIlsCost*ilsUnits;
+    double otherCosts = state.lossCost + mIlsCost*(ilsUnits-1);
 
     // Cospeciation  + Loss impossible in Alpha
     //c3	Cospeciation + Loss
     double cost = computeCostList( otherCosts, state.idU, idXl, 
                                     eventTrip, state );
     UPDATE_OPT( optCost, bestSplit, cost, idXl, -1, 'j' );
-/*
-if( cost < 1000 ) {
-cout << state.idU << "," << state.idX << " from " << state.idU << "," << idXl << " IL 1 cost=" << cost << ":";
-BOOST_FOREACH( double d, state.costList )
-    cout << " " << d;
-cout << endl;
-}
-*/
+
+// if( cost < 1000 ) {
+// cout << state.idU << "," << state.idX << " from " << state.idU << "," << idXl << " IL 1 cost=" << cost << ":";
+// BOOST_FOREACH( double d, state.costList )
+//     cout << " " << d;
+// cout << endl;
+// }
+
 
     cost = computeCostList( otherCosts, state.idU, idXr, eventTrip, state );
     UPDATE_OPT( optCost, bestSplit, cost, idXr, -1, 'j' );
-/*
-if( cost < 1000 ) {
-cout << state.idU << "," << state.idX << " from " << state.idU << "," << idXr << " IL 2 cost=" << cost << ":";
-BOOST_FOREACH( double d, state.costList )
-    cout << " " << d;
-cout << endl;
-}*/
+
+// if( cost < 1000 ) {
+// cout << state.idU << "," << state.idX << " from " << state.idU << "," << idXr << " IL 2 cost=" << cost << ":";
+// BOOST_FOREACH( double d, state.costList )
+//     cout << " " << d;
+// cout << endl;
+// }
 }
 
 
@@ -592,20 +600,22 @@ cout << "  T: " << optCost << endl;
 cout << "  D: " << optCost << endl;
 #endif
 
-    // speciations
-    vector< pair<int,int> > speciesSplits 
-                                = mSpeciesTree->getSplits( state.idX );
-    for( size_t i=0; i<speciesSplits.size(); i++ ) {
-        if( speciesSplits[i].second == -1 ) // null, ignore 
-            continue;
+        // speciations
+        vector< pair<int,int> > speciesSplits 
+                                    = mSpeciesTree->getSplits( state.idX );
+        // cout << "species" << endl;
+        // cout << state.idX << endl;
+        for( size_t i=0; i<speciesSplits.size(); i++ ) {
+            if( speciesSplits[i].second == -1 ) // null, ignore 
+                continue;
 
-        computeSpeciationCost( idUl, idUr, speciesSplits[i].first,
-            speciesSplits[i].second, costThisSplit, 
-            state, optCost, bestSplit );
-#ifdef PRINT_COSTS
-cout << "  S: " << optCost << endl;
-#endif
-    }
+            computeSpeciationCost( idUl, idUr, speciesSplits[i].first,
+                speciesSplits[i].second, costThisSplit, 
+                state, optCost, bestSplit );
+    #ifdef PRINT_COSTS
+    cout << "  S: " << optCost << endl;
+    #endif
+        }
 
     if( mUseILS ) {
         // ILS 
@@ -613,8 +623,8 @@ cout << "  S: " << optCost << endl;
                                 = mSpeciesTree->getIlsSplits( state.idX );
         for( size_t i=0; i<ilsSplits.size(); i++ ) {
 // Is this possible
-            if( ilsSplits[i].second == -1 )
-                continue;
+            // if( ilsSplits[i].second == -1 )
+            //     continue;
             computeIlsCost( idUl, idUr, ilsSplits[i].first, ilsSplits[i].second, 
                             costThisSplit, state, optCost, bestSplit );
 #ifdef PRINT_COSTS
@@ -724,6 +734,8 @@ double DTLMatrix::computeOptimaForCell(
     // mSpeciesTree->mapSpeciesIdToClades();
     // state variables in class
     state.idX = idX;
+    //cout << "idX: " << idX << endl;
+    //cout << "idU: " << state.idU << endl;
     //cout << state.idX <<" " << state.idU << endl;	
     if( mSubOpt ) 
         state.costList.clear();
@@ -748,10 +760,16 @@ double DTLMatrix::computeOptimaForCell(
 
     pair<int,int> cladeSplit;
     for( int splitIdx=0; splitIdx<splitCount; splitIdx++ ) {
+        // cout << splitCount << endl;
         cladeSplit = mCladesTrips->getCladeSplit( state.idU, splitIdx );
+        //  cout << "species" << endl;
+        //  cout << idX << endl;
+        //  cout << "clade" << endl;
+        //  cout << state.idU << endl;
+        //  cout << cladeSplit.first << " " << cladeSplit.second << endl;
 
         if( cladeSplit.first != -1 ){ // if not a leaf
-            //cout << "computeOptimaForCladeSplit\n";
+            // cout << "computeOptimaForCladeSplit\n";
             computeOptimaForCladeSplit( toCompute, splitIdx, cladeSplit, state,
                                    optCost, bestSplit );
          	                          
@@ -1586,7 +1604,7 @@ void DTLMatrix::calculateMatrixTS(
             allCostsTS.push_back( state.costList );
 
         // Needed for ILS loss
-        if( mUseILS ) {
+        if( mUseILS ) { //???
             mMatrix.setValue( state.idU, speciesNodeIdsTS[i], 
                               optAllOverTriples );
             if( mSubOpt ) 
@@ -1628,7 +1646,7 @@ void DTLMatrix::calculateMatrixTS(
 
             if( mSubOpt ) 
                 computeTransferLossCostVT( alphaCosts, allCostsTS[i], state );
-             else if( mTriplets ) 
+            else if( mTriplets ) 
                 computeTransferLossCostVT( i, state );
         }
 
@@ -2886,7 +2904,6 @@ void DTLMatrix::createVertices(
                 alphaIdForTS, "TLTD", cost, mLossCost, trip );
 
 
-
     if( mUseILS ) {
         // ILS - there can be multiple paths through the species, unlike
         // the gene tree, where there must be one tree, i.e. no best
@@ -2920,7 +2937,6 @@ void DTLMatrix::createVertices(
                             ilsSplits[i].second, cladeSplit.second,
                             ilsSplits[i].first, "I", cost, mIlsCost*ilsUnits, trip );
                 }
-
                 // ILS + loss
                 addVertices( graph, pairVertex, qList, idU, 
                             ilsSplits[i].first, "IL", cost, 
