@@ -1665,6 +1665,20 @@ vector< pair<int,int> > MySpeciesTree::getIlsSplits( int id ) {
     return mIlsSplits[id];
 }
 
+int MySpeciesTree::findLargestRealId() {
+    int num = mCorrespondence.size() - 1;
+    for( size_t id=0; id<mCorrespondence.size(); id++ ) {
+        MySpeciesNode *node = mCorrespondence[id];
+        if( node->getId() != (int) id ) {
+            num = id - 1;
+            break;
+        }
+    }
+    largestRealId = num;
+    return num;
+}
+
+
 /**
  * Print all ids and their info.
  */

@@ -95,6 +95,7 @@ private:
     vector<bool> mILSnodes;    ///< tracks ils fake nodes
     vector<int> mTimeSlices; ///< time slices mapping by postOrder id
     vector< vector<int> > SpeciesNodeClade; // map id to set of leaves ids
+    int largestRealId;
 
     vector< vector< pair<int,int> > > mSplits; 
         ///< all splits from species tree, by clade
@@ -121,9 +122,6 @@ private:
     int processClades( vector<int> &cladeList );
     vector<int> computeSpeciesCladesAndSplitsAux( MySpeciesNode *node,
     double ilsCutoff, int maxClusterSize, vector<int> &stats );
-    //void MySpeciesTree::mapSpeciesIdToClades();
-    // vector< vector<int> > mapSpeciesIdToClades();
-    //vector<int> MySpeciesTree::getIlsCladById(int ilsNodeId);
     vector<int> getIlsCladById(int ilsNodeId);
 
 
@@ -135,8 +133,8 @@ public:
     MySpeciesTree() 
        : mHasAlpha(false), mSubdivision(false)
     {} 
-    //vector< vector<int> > SpeciesNodeClade;// qy
     vector< vector<int> > mapSpeciesIdToClades();
+    int findLargestRealId();
 
 
     /**
@@ -164,6 +162,10 @@ public:
 
     vector< vector<int> > getSpeciesNodeClade(){
         return SpeciesNodeClade;
+    }
+
+    int getLargestRealId(){
+        return largestRealId;
     }
 
     void assignPostOrderIds();
