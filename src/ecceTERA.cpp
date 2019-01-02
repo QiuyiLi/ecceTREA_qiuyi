@@ -2085,8 +2085,8 @@ int processSpeciesTree(
         maxTS = speciesTree->setVectorTimeSlices();
     }
 
-//speciesTree->printIds();
-//speciesTree->printTreeInfo(); // debugging
+speciesTree->printIds();
+speciesTree->printTreeInfo(); // debugging
 //vector<MySpeciesNode*> allNodes = speciesTree->getNodes();
     //BOOST_FOREACH( MySpeciesNode *node, allNodes ) 
         //cout << node->getId() << "\n";

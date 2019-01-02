@@ -1702,6 +1702,11 @@ void MySpeciesTree::printIds() {
             else
                 cout << " ts=" << node->getInfos().timeSlice;
 
+            cout << " leaves set: ";
+            SpeciesNodeClade = MySpeciesTree::mapSpeciesIdToClades();
+            BOOST_FOREACH( int num, SpeciesNodeClade[id] )
+            cout << num << ",";
+
             vector< pair<int,int> > splits = getSplits( id );
             pair<int,int> split;
             //vector<int> setqy; 
