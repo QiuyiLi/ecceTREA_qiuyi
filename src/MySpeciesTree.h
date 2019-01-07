@@ -131,7 +131,7 @@ public:
 
     /** empty tree for Strale */
     MySpeciesTree() 
-       : mHasAlpha(false), mSubdivision(false)
+       : mHasAlpha(false), mSubdivision(false), largestRealId(-1)
     {} 
     vector< vector<int> > mapSpeciesIdToClades();
     int findLargestRealId();
@@ -143,7 +143,7 @@ public:
  	MySpeciesTree(
             MySpeciesNode &root ) ///< root node
         : MyTreeTemplate<MySpeciesNode>(& root),
-        mHasAlpha(false), mSubdivision(false)
+        mHasAlpha(false), mSubdivision(false), largestRealId(-1)
     {}  
 
 
@@ -165,6 +165,7 @@ public:
     }
 
     int getLargestRealId(){
+        if(largestRealId == -1) findLargestRealId();
         return largestRealId;
     }
 

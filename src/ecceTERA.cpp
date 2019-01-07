@@ -1252,7 +1252,7 @@ bool minRecsLoop(
                 inEps );
     }
     graph = dtlMatrix->constructGraph( 
-                gBoolParams.find("verbose")->second );
+                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
     notTooBig = graph.countReconciliationNumberAndCheck( inEps,
       gBoolParams.find("keep.only.canonical.reconciliations")->second, 
                 gBoolParams.find("verbose")->second, 
@@ -1286,7 +1286,7 @@ void printReconciliations(
     if( gBoolParams.find("subopt.support")->second ) {
         // make new graph and remove non-optimal nodes
         DTLGraph optGraph = dtlMatrix->constructGraph( 
-                                gBoolParams.find("verbose")->second );
+                                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
         optGraph.pruneNonoptimal();
 
         bool notTooBig = optGraph.countReconciliationNumberAndCheck( 0,
@@ -1414,7 +1414,7 @@ void makeGraph(
     MySpeciesTree *speciesTree ) ///< species tree
 { 
     DTLGraph graph = dtlMatrix->constructGraph( 
-                        gBoolParams.find("verbose")->second );
+                        gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
 //graph.checkScore( gDoubleParams.find("dupli.cost")->second, gDoubleParams.find("HGT.cost")->second, gDoubleParams.find("loss.cost")->second );
 
     // print a non-canonical graph
@@ -2086,7 +2086,7 @@ int processSpeciesTree(
     }
 
 speciesTree->printIds();
-speciesTree->printTreeInfo(); // debugging
+// speciesTree->printTreeInfo(); // debugging
 //vector<MySpeciesNode*> allNodes = speciesTree->getNodes();
     //BOOST_FOREACH( MySpeciesNode *node, allNodes ) 
         //cout << node->getId() << "\n";
@@ -2374,7 +2374,7 @@ int main(int args, char ** argv)
 				int sonCount = node->getNumberOfSons();
 				if( sonCount > 2 ) {
 					errStr = "A network node has more than two children";
-					return false;
+					return 0;
 				}
 				for( int i=0; i<sonCount; i++ ) {
 					MySpeciesNode *son = node->getSon( i );

@@ -2703,19 +2703,30 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrix::getRootNodes(
         bestCost += mEpsilon;
     int rootClade = mCladesTrips->mClades.getRootClade();
     int j=0;
-    if( keepRoot )
+    vector<double> values;
+    cout << "keeproot " << keepRoot << endl;
+    if( keepRoot ){
         j = mSpeciesTree->getRootNode()->getId();
+        //cout << "==========" << j << endl;
+        //values.push_back( mMatrix.getValue(rootClade,j) );
+        DTLGraph::MyGraph::Vertex vertex
+                    = graph.addRoot( rootClade, j, mMatrix.getValue(rootClade,j));
+        rootList.push_back( vertex );
+    }
     // for( ; j<mSTnodes; j++ ) {
-    mSpeciesTree->findLargestRealId();	
+    //mSpeciesTree->findLargestRealId();
+    else{	
     int largestRealId = mSpeciesTree->getLargestRealId();
     // cout << largestRealId << endl;
-    for( ; j<=largestRealId; j++ ) {
-		vector<double> values;
-		if( mSubOpt ) {
-			values = mMatrixV->getValue(rootClade,j);
-		} else {
-			values.push_back( mMatrix.getValue(rootClade,j) );
-		}
+    for(j=0; j<=largestRealId; j++ ) {
+        cout << "------------" << j << endl;
+    	// vector<double> values;
+        values.clear();
+    	if( mSubOpt ) {
+    		values = mMatrixV->getValue(rootClade,j);
+    	} else {
+    		values.push_back( mMatrix.getValue(rootClade,j) );
+    	}
         for( size_t i=0; i<values.size(); i++ ) {
             if( !COST_GREATER( values[i], bestCost ) ) {
                 DTLGraph::MyGraph::Vertex vertex
@@ -2723,10 +2734,46 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrix::getRootNodes(
                 rootList.push_back( vertex );
         	}
         }
-        if( keepRoot ) 
-            break;
+
+        //if( keepRoot ) 
+        //    break;
+    }
     }
 
+    // //vector<double> values;
+    // cout << "keeproot" << keepRoot << endl;
+    // if( keepRoot ){
+    //     j = mSpeciesTree->getRootNode()->getId();
+    //     //cout << "==========" << j << endl;
+    //     //values.push_back( mMatrix.getValue(rootClade,j) );
+    //     //DTLGraph::MyGraph::Vertex vertex
+    //     //            = graph.addRoot( rootClade, j, mMatrix.getValue(rootClade,j));
+    //     //rootList.push_back( vertex );
+    // }
+    // // for( ; j<mSTnodes; j++ ) {
+    // //mSpeciesTree->findLargestRealId();
+    // //else{	
+    // int largestRealId = mSpeciesTree->getLargestRealId();
+    // // cout << largestRealId << endl;
+    // for( ; j<=largestRealId; j++ ) {
+    //     cout << "------------" << j << endl;
+	// 	vector<double> values;
+	// 	if( mSubOpt ) {
+	// 		values = mMatrixV->getValue(rootClade,j);
+	// 	} else {
+	// 		values.push_back( mMatrix.getValue(rootClade,j) );
+	// 	}
+    //     for( size_t i=0; i<values.size(); i++ ) {
+    //         if( !COST_GREATER( values[i], bestCost ) ) {
+    //             DTLGraph::MyGraph::Vertex vertex
+    //                 = graph.addRoot( rootClade, j, values[i]);
+    //             rootList.push_back( vertex );
+    //     	}
+    //     }
+    //     if( keepRoot ) 
+    //         break;
+    // }
+    // //}
     return rootList;
 }
 

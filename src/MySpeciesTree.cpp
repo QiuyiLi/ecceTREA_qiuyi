@@ -71,7 +71,7 @@ MySpeciesTree::MySpeciesTree(
         string description, ///< Newick string 
         string &errString, ///< error description
         bool bootstrap ) ///< names are bootstrap values
-    : MyTreeTemplate<MySpeciesNode>(), mHasAlpha(false), mSubdivision(false)
+    : MyTreeTemplate<MySpeciesNode>(), mHasAlpha(false), mSubdivision(false), largestRealId(-1)
 {
     readTree( description, errString, false, bootstrap );
 
@@ -1675,6 +1675,8 @@ int MySpeciesTree::findLargestRealId() {
         }
     }
     largestRealId = num;
+    //cout << "num=" << num << endl;
+    //cout << "largestRealId=" << largestRealId << endl;
     return num;
 }
 
@@ -2222,7 +2224,6 @@ vector<int> MySpeciesTree::computeSpeciesCladesAndSplitsAux(
                 stats[childClades.size()]++;
             // not marked process clades
             int idX = processClades( childClades );
-            findLargestRealId();
 
             // return just this clade
             childClades.clear();
