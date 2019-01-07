@@ -2222,6 +2222,7 @@ vector<int> MySpeciesTree::computeSpeciesCladesAndSplitsAux(
                 stats[childClades.size()]++;
             // not marked process clades
             int idX = processClades( childClades );
+            findLargestRealId();
 
             // return just this clade
             childClades.clear();

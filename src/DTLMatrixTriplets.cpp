@@ -3,6 +3,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 Copyright or © or Copr. CNRS
@@ -1067,7 +1068,10 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrixTriplets::getRootNodes(
     int j=0;
     if( keepRoot )
         j = mSpeciesTree->getRootNode()->getId();
-    for( ; j<mSTnodes; j++ ) {	
+    // for( ; j<mSTnodes; j++ ) {	
+    //mSpeciesTree->findLargestRealId();	
+    int largestRealId = mSpeciesTree->getLargestRealId();
+    for( ; j<=largestRealId; j++ ) {
 		vector<EventTriplet> trips = mMatrixT->getValueSure(rootClade,j);
         BOOST_FOREACH( EventTriplet t, trips ) {
             BOOST_FOREACH( EventTriplet tall, allTrips ) {

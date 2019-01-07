@@ -751,8 +751,7 @@ double DTLMatrix::computeOptimaForCell(
         state.lossCost = xNode->getInfos().lossCost;
     }
 
-    // double optCost = std::numeric_limits<double>::max();
-    double optCost = 999;
+    double optCost = std::numeric_limits<double>::max();
     BestSplit bestSplit;
     bestSplit.event = 'u'; // non-existent event
     double lastCost = optCost;
@@ -2175,7 +2174,7 @@ double DTLMatrix::getBestCost(
 {
     rootClade = mCladesTrips->mClades.getRootClade();
     x = 0;
-    mSpeciesTree->findLargestRealId();
+    //mSpeciesTree->findLargestRealId();
     int largestRealId = mSpeciesTree->getLargestRealId();
     double bestCost = mMatrix.getValue( rootClade, 0 );
     for ( int j=1; j<=largestRealId; j++) {
@@ -2706,7 +2705,11 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrix::getRootNodes(
     int j=0;
     if( keepRoot )
         j = mSpeciesTree->getRootNode()->getId();
-    for( ; j<mSTnodes; j++ ) {	
+    // for( ; j<mSTnodes; j++ ) {
+    mSpeciesTree->findLargestRealId();	
+    int largestRealId = mSpeciesTree->getLargestRealId();
+    // cout << largestRealId << endl;
+    for( ; j<=largestRealId; j++ ) {
 		vector<double> values;
 		if( mSubOpt ) {
 			values = mMatrixV->getValue(rootClade,j);

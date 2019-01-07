@@ -3,6 +3,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 
@@ -932,7 +933,7 @@ string DTLGraph::createNameWithExternalIds(
 
 
 
-/**
+/** ???
  * Print the edges of the graph (pairs of vertices) with the number
  * of reconciliations each vertex is in (support).
  */
@@ -1692,7 +1693,7 @@ bool DTLGraph::getScoredReconciliation(
         vector< vector<DTLGraph::MyGraph::Vertex> > &reconciliation,
             ///< The reconciliation as a list of clades (id_u) with associated 
             ///< specie nodes (id_x).
-        bool random )   ///< Create a randome reconciliation if true.
+        bool random )   ///< Create a random reconciliation if true.
 {
     // score the graph if necessary
     if( !random && mScoredProblem != problem ) 
@@ -1738,7 +1739,7 @@ bool DTLGraph::getScoredReconciliation(
                     }
                 } else {
                     double score = mGraph.properties(eventSon).score;
-                    if( problem == 5 ) {
+                    if( problem == 5 ) { // ???
                         int u, x, d, t, l;
                         double cost;
                         getVertexIdentfiers( root, u, x, cost, d, t, l );
@@ -2186,7 +2187,7 @@ void DTLGraph::orthologyOutput(
 }
 
 
-/**
+/**???
  * Print one or all problem reconciliations to a file.
  */
 void DTLGraph::printReconciliation( 
@@ -3092,6 +3093,8 @@ string DTLGraph::getStringId(
     int idX ) ///< species postorder id
 {
     MySpeciesNode *node = mSpeciesTree->getNodeById( idX );
+    // string a = to_string(idX);
+    // b + a
     if( node->isLeaf() ) 
         return "'" + node->getName() + "'";
     else  
@@ -3162,9 +3165,10 @@ string DTLGraph::getEventString(
         eventOutName += eventName[i];
     }
 
-    // output post order species id, rather than internal species id
+    // output post order species id, rather than internal species id // ???
     int idX = mGraph.properties(reconciliation[idU][z]).id_x; 
-    string idXstr = getStringId( idX );
+    // string idXstr = getStringId( idX );
+    string idXstr = to_string(idX);
 
     double support;
     if( eventSupports.size() == 0 ) {
