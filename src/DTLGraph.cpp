@@ -3197,20 +3197,24 @@ string DTLGraph::getEventString(
             if( mSpeciesTree->isAlpha( lostSonX ) )
                 lostId = "-1";
             else
-                lostId = getStringId( lostSonX );
+                //lostId = getStringId( lostSonX );
+                lostId = to_string( lostSonX );
 
             string keptId;
             if( mSpeciesTree->isAlpha( keptSonX ) )
                 keptId = "-1";
             else
-                keptId = getStringId( keptSonX );
+                //keptId = getStringId( keptSonX );
+                keptId = to_string( keptSonX );
 
             auxStr = lostId + "," + keptId;
         } else if( eventOutName == "TL" ) {
-            auxStr = idXstr + "," + getStringId( keptSonX );
+            //auxStr = idXstr + "," + getStringId( keptSonX );
+            auxStr = idXstr + "," + to_string( keptSonX );
         } else if( eventOutName == "TLFD" ) {
             idXstr = "-1";
-            auxStr = "-1," + getStringId( keptSonX );
+            //auxStr = "-1," + getStringId( keptSonX );
+            auxStr = "-1," + to_string( keptSonX );
         } else if( eventOutName == "TLTD" ) {
             auxStr = idXstr + ",-1";
         } else {
@@ -3228,15 +3232,18 @@ string DTLGraph::getEventString(
         int idXr = mGraph.properties(vr).id_x; 
         if( eventOutName == "S" || eventOutName == "T" || eventOutName == "I" ) 
         {
-            auxStr = getStringId( idXl ) + "," + getStringId( idXr );
+            //auxStr = getStringId( idXl ) + "," + getStringId( idXr );
+            auxStr = to_string( idXl ) + "," + to_string( idXr );
         } else {
             if( eventOutName == "TFD" )
                 idXstr = "-1";
             // transfer to/from dead, replace alpha (dead) by -1
             if( mSpeciesTree->isAlpha( idXl ) )
-                auxStr = "-1," + getStringId( idXr );
+                //auxStr = "-1," + getStringId( idXr );
+                auxStr = "-1," + to_string( idXr );
             else if( mSpeciesTree->isAlpha( idXr ) )
-                auxStr = getStringId( idXl ) + ",-1";
+                //auxStr = getStringId( idXl ) + ",-1";
+                auxStr = to_string( idXl ) + ",-1";
             else 
                 throw bpp::Exception("DTLGraph::getEventString: alpha not in "
                                 "TTD or TFD" );
