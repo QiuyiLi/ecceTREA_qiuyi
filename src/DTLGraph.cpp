@@ -228,7 +228,7 @@ double DTLGraph::countSubReconciliations() {
                         -= mGraph.properties(son).recNumber;
         }
     }
-
+    // cout << "rootSum=" << rootSum << endl;
     return rootSum;
 }
 
@@ -716,6 +716,7 @@ void DTLGraph::bestScoreFinishVertex(
     if( mScoredProblem != 5 || mGraph.properties(z).name[0] != 'S'  
              || mGraph.properties(z).name[1] != '_' )
     {
+        // cout << "support=" << mGraph.properties(z).support << endl;
         mGraph.properties(z).score = mGraph.properties(z).support
                                    + args->mScoreMod;
     }
@@ -737,6 +738,7 @@ void DTLGraph::bestScoreFinishVertex(
 
     double sMax = 0;
     bool first = true;
+
     BOOST_FOREACH( MyGraph::Vertex eventSon1, eventSons1) {
     
         double sonScore1 = mGraph.properties(eventSon1).score;
@@ -760,8 +762,8 @@ void DTLGraph::bestScoreFinishVertex(
             }
         }
     }
-
     mGraph.properties(z).score += sMax;
+    //cout << "maxScore=" << sMax << endl;
 }
 
  
@@ -1372,6 +1374,7 @@ double DTLGraph::getBestScore(
     double scoreMod = 0;
     if( problem > 2 && problem < 5 )
         scoreMod = -getNumberSolutions()/2;
+        // cout << "scoreMod=" << scoreMod << endl;
 
     if( mScoredProblem != problem ) { // else already done
 
@@ -2215,6 +2218,7 @@ void DTLGraph::printReconciliation(
     BOOST_FOREACH( string curProblemStr, problems ) {
         bool random = false;
         int problem = 3;
+        // cout << "-----------------123" << endl;
         if( curProblemStr == "random" ) 
             random = true;
         else if( curProblemStr == "asymmetric" ) 
@@ -2284,7 +2288,7 @@ void DTLGraph::printReconciliation(
 
         if( curProblemStr != "random" )
             curProblemStr += " median";
-        cout << curProblemStr << " score: " << score 
+        cout << curProblemStr << " problem=" << problem << " score: " << score 
              << otherStr << endl;
     }  
 }

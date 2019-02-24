@@ -1,0 +1,132 @@
+bin/ecceTERA species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 ils.cutoff=50 ils.cost=0.7
+
+
+bin/ecceTERA_mac species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 compute.TD=false
+
+bin/ecceTERA species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 compute.TD=false
+
+
+bin/ecceTERA_mac species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 ils.cutoff=15 ils.cost=2
+
+src/ecceTERA.cpp species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 ils.cutoff=15 ils.cost=2
+
+1 ============================================= ils.cost=2; min.cost=3
+6:6,S,2,'D'@1:4,D_d
+4:6,S,2,'D'@1;2,S,'B','A'@1:2,A_a
+2:2,S,'B','A'@1;'B',T,'B','C'@1:B_b,C_c
+
+1 ============================================= ils.cost=3; min.cost=3
+6:6,S,2,'D'@1:4,D_d
+4:6,S,2,'D'@1;2,S,'B','A'@1:2,A_a
+2:2,S,'B','A'@1;'B',T,'B','C'@1:B_b,C_c
+
+1 ============================================= ils.cost=4; min.cost=3
+6:6,S,2,'D'@1:4,D_d
+4:6,S,2,'D'@1;2,S,'B','A'@1:2,A_a
+2:2,S,'B','A'@1;'B',T,'B','C'@1:B_b,C_c
+
+1 ============================================= ils.cost=0; min.cost=0
+6:6,I,6,'D'@0.33:4,D_d
+4:6,I,6,'D'@0.33;6,I,6,'A'@0.67:2,A_a
+2:6,I,6,'A'@0.67;6,S,'B','C'@1:B_b,C_c
+2 =============================================
+6:6,I,6,'D'@0.67:4,D_d
+4:6,I,6,'D'@0.67;6,I,6,'A'@0.67:2,A_a
+2:6,I,6,'A'@0.67;6,S,'B','C'@1:B_b,C_c
+3 =============================================
+6:6,I,6,'D'@0.67:4,D_d
+4:6,I,6,'D'@0.67;6,I,6,'A'@0.33:2,A_a
+2:6,I,6,'A'@0.33;6,S,'B','C'@1:B_b,C_c
+
+1 ============================================= ils.cost=1; min.cost=2 (0.7,1.4)
+6:6,I,6,'D'@0.33:4,D_d
+4:6,I,6,'D'@0.33;6,I,6,'A'@0.67:2,A_a
+2:6,I,6,'A'@0.67;6,S,'B','C'@1:B_b,C_c
+2 =============================================
+6:6,I,6,'D'@0.67:4,D_d
+4:6,I,6,'D'@0.67;6,I,6,'A'@0.67:2,A_a
+2:6,I,6,'A'@0.67;6,S,'B','C'@1:B_b,C_c
+3 =============================================
+6:6,I,6,'D'@0.67:4,D_d
+4:6,I,6,'D'@0.67;6,I,6,'A'@0.33:2,A_a
+2:6,I,6,'A'@0.33;6,S,'B','C'@1:B_b,C_c
+
+1 ============================================= ils.cost=1.5; min.cost=3
+6:6,I,6,'D'@0.25:4,D_d
+4:6,I,6,'D'@0.25;6,I,6,'A'@0.5:2,A_a
+2:6,I,6,'A'@0.5;6,S,'B','C'@0.75:B_b,C_c
+2 =============================================
+6:6,S,2,'D'@0.25:4,D_d
+4:6,S,2,'D'@0.25;2,S,'B','A'@0.25:2,A_a
+2:2,S,'B','A'@0.25;'B',T,'B','C'@0.25:B_b,C_c
+3 =============================================
+6:6,I,6,'D'@0.5:4,D_d
+4:6,I,6,'D'@0.5;6,I,6,'A'@0.5:2,A_a
+2:6,I,6,'A'@0.5;6,S,'B','C'@0.75:B_b,C_c
+4 =============================================
+6:6,I,6,'D'@0.5:4,D_d
+4:6,I,6,'D'@0.5;6,I,6,'A'@0.25:2,A_a
+2:6,I,6,'A'@0.25;6,S,'B','C'@0.75:B_b,C_c
+
+##fail to give double cost
+##same tree, different newick format, different ids
+1 ============================================= 
+Stree:(((B_b:0.2,C_c:0.2):0.1,A_a:0.3):0.1,D_d:0.4);
+6:6,I,6,'D'@1:4,D_d
+4:6,I,6,'D'@1;6,S,4,'A'@1:2,A_a
+2:6,S,4,'A'@1;4,S,'B','C'@1:B_b,C_c
+
+1 ============================================= 
+Stree:((A_a:0.3,(B_b:0.2,C_c:0.2):0.1):0.1,D_d:0.4);
+6:6,I,6,'D'@1:4,D_d
+4:6,I,6,'D'@1;6,S,'A',4@1:A_a,3
+3:6,S,'A',4@1;4,S,'B','C'@1:B_b,C_c
+
+
+
+
+
+1 =============================================
+6:4,S,2,3@0.67:4,D_d
+4:4,S,2,3@0.67;2,T,0,2@0.33:2,C_c
+2:2,T,0,2@0.33;0,T,0,1@0.33:A_a,B_b
+2 =============================================
+6:4,S,2,3@0.67:4,D_d
+4:4,S,2,3@0.67;2,T,1,2@0.33:2,C_c
+2:2,T,1,2@0.33;1,T,0,1@0.67:A_a,B_b
+3 =============================================
+6:5,I,18,22@0.33:4,D_d
+4:5,I,18,22@0.33;18,S,10,14@0.33:2,C_c
+2:18,S,10,14@0.33;1,T,0,1@0.67:A_a,B_b
+
+
+bin/ecceTERA_mac species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 loss.cost=700 ils.cost=7 ils.cutoff=0 HGT.cost=1 compute.T=1 compute.TD=0 gene.origination.species.root=1
+
+1 =============================================
+2:'A',T,'A','D'@0.5:A_a,D_d
+2 =============================================
+2:'D',T,'A','D'@0.5:A_a,D_d
+
+bin/ecceTERA_mac species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 loss.cost=700 ils.cost=7 ils.cutoff=0 HGT.cost=0 compute.T=1 compute.TD=0 gene.origination.species.root=1
+
+
+bin/ecceTERA species.file=tests/AStree.tree gene.file=tests/AGtree.gtrees print.reconciliations=2 loss.cost=700 ils.cost=7 ils.cutoff=0 HGT.cost=1 compute.T=1 compute.TD=0 gene.origination.species.root=1
+
+1 =============================================
+2:6,SL,5,9@1;0,T,0,3@1:A_a,D_d
+
+T.cost=0 root=1 checked
+
+Mine: 
+1 =============================================
+2:6,SL,5,9@1;0,T,0,3@1:A_a,D_d
+
+original:
+
+ils=true
+
+
+
+
+
+

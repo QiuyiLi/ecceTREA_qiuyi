@@ -181,7 +181,7 @@ string const gParameters[gParameterCount][4] = {
  {"ils.cost", "double", "1", ""}, //"cost of a incomplete lineage sorting"},
  {"ils.cutoff", "double", "0", ""},
      //"branch length cutoff for incomplete lineage sorting (0 is disabled)"},
- {"ils.max.cluster.size", "int", "15", ""},
+ {"ils.max.cluster.size", "int", "999", ""}, // qiuyi
      //"maximum size of an ils cluster (abort if exceeded)"},
 
 //netTERA

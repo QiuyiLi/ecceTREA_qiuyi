@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/qiuyi_li/desktop/ecceTERA-master
+CMAKE_SOURCE_DIR = /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/qiuyi_li/desktop/ecceTERA-master
+CMAKE_BINARY_DIR = /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(CMAKE_COMMAND) -E cmake_progress_start /Users/qiuyi_li/desktop/ecceTERA-master/CMakeFiles /Users/qiuyi_li/desktop/ecceTERA-master/src/ext/bpp/bpp-seq/src/CMakeFiles/progress.marks
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qiuyi_li/desktop/ecceTERA-master/CMakeFiles 0
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(CMAKE_COMMAND) -E cmake_progress_start /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/CMakeFiles /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/CMakeFiles/progress.marks
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/clean
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/preinstall
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/preinstall
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/rule:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/rule
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f CMakeFiles/Makefile2 src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/rule
 .PHONY : src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ bpp-seq: src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/rule
 
 # fast build rule for target.
 bpp-seq/fast:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build
 .PHONY : bpp-seq/fast
 
 Bpp/Seq/Alphabet/AbstractAlphabet.o: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o
@@ -177,7 +177,7 @@ Bpp/Seq/Alphabet/AbstractAlphabet.o: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/AbstractAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/AbstractAlphabet.i: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i
@@ -186,7 +186,7 @@ Bpp/Seq/Alphabet/AbstractAlphabet.i: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/AbstractAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/AbstractAlphabet.s: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s
@@ -195,7 +195,7 @@ Bpp/Seq/Alphabet/AbstractAlphabet.s: Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/AbstractAlphabet.cpp.s
 
 Bpp/Seq/Alphabet/AlphabetExceptions.o: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o
@@ -204,7 +204,7 @@ Bpp/Seq/Alphabet/AlphabetExceptions.o: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o
 .PHONY : Bpp/Seq/Alphabet/AlphabetExceptions.cpp.o
 
 Bpp/Seq/Alphabet/AlphabetExceptions.i: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i
@@ -213,7 +213,7 @@ Bpp/Seq/Alphabet/AlphabetExceptions.i: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i
 .PHONY : Bpp/Seq/Alphabet/AlphabetExceptions.cpp.i
 
 Bpp/Seq/Alphabet/AlphabetExceptions.s: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s
@@ -222,7 +222,7 @@ Bpp/Seq/Alphabet/AlphabetExceptions.s: Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s
 .PHONY : Bpp/Seq/Alphabet/AlphabetExceptions.cpp.s
 
 Bpp/Seq/Alphabet/AlphabetTools.o: Bpp/Seq/Alphabet/AlphabetTools.cpp.o
@@ -231,7 +231,7 @@ Bpp/Seq/Alphabet/AlphabetTools.o: Bpp/Seq/Alphabet/AlphabetTools.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/AlphabetTools.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.o
 .PHONY : Bpp/Seq/Alphabet/AlphabetTools.cpp.o
 
 Bpp/Seq/Alphabet/AlphabetTools.i: Bpp/Seq/Alphabet/AlphabetTools.cpp.i
@@ -240,7 +240,7 @@ Bpp/Seq/Alphabet/AlphabetTools.i: Bpp/Seq/Alphabet/AlphabetTools.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/AlphabetTools.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.i
 .PHONY : Bpp/Seq/Alphabet/AlphabetTools.cpp.i
 
 Bpp/Seq/Alphabet/AlphabetTools.s: Bpp/Seq/Alphabet/AlphabetTools.cpp.s
@@ -249,7 +249,7 @@ Bpp/Seq/Alphabet/AlphabetTools.s: Bpp/Seq/Alphabet/AlphabetTools.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/AlphabetTools.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/AlphabetTools.cpp.s
 .PHONY : Bpp/Seq/Alphabet/AlphabetTools.cpp.s
 
 Bpp/Seq/Alphabet/CodonAlphabet.o: Bpp/Seq/Alphabet/CodonAlphabet.cpp.o
@@ -258,7 +258,7 @@ Bpp/Seq/Alphabet/CodonAlphabet.o: Bpp/Seq/Alphabet/CodonAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/CodonAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/CodonAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/CodonAlphabet.i: Bpp/Seq/Alphabet/CodonAlphabet.cpp.i
@@ -267,7 +267,7 @@ Bpp/Seq/Alphabet/CodonAlphabet.i: Bpp/Seq/Alphabet/CodonAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/CodonAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/CodonAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/CodonAlphabet.s: Bpp/Seq/Alphabet/CodonAlphabet.cpp.s
@@ -276,7 +276,7 @@ Bpp/Seq/Alphabet/CodonAlphabet.s: Bpp/Seq/Alphabet/CodonAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/CodonAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/CodonAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/CodonAlphabet.cpp.s
 
 Bpp/Seq/Alphabet/DNA.o: Bpp/Seq/Alphabet/DNA.cpp.o
@@ -285,7 +285,7 @@ Bpp/Seq/Alphabet/DNA.o: Bpp/Seq/Alphabet/DNA.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/DNA.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.o
 .PHONY : Bpp/Seq/Alphabet/DNA.cpp.o
 
 Bpp/Seq/Alphabet/DNA.i: Bpp/Seq/Alphabet/DNA.cpp.i
@@ -294,7 +294,7 @@ Bpp/Seq/Alphabet/DNA.i: Bpp/Seq/Alphabet/DNA.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/DNA.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.i
 .PHONY : Bpp/Seq/Alphabet/DNA.cpp.i
 
 Bpp/Seq/Alphabet/DNA.s: Bpp/Seq/Alphabet/DNA.cpp.s
@@ -303,7 +303,7 @@ Bpp/Seq/Alphabet/DNA.s: Bpp/Seq/Alphabet/DNA.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/DNA.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DNA.cpp.s
 .PHONY : Bpp/Seq/Alphabet/DNA.cpp.s
 
 Bpp/Seq/Alphabet/DefaultAlphabet.o: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o
@@ -312,7 +312,7 @@ Bpp/Seq/Alphabet/DefaultAlphabet.o: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/DefaultAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/DefaultAlphabet.i: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i
@@ -321,7 +321,7 @@ Bpp/Seq/Alphabet/DefaultAlphabet.i: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/DefaultAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/DefaultAlphabet.s: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s
@@ -330,7 +330,7 @@ Bpp/Seq/Alphabet/DefaultAlphabet.s: Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/DefaultAlphabet.cpp.s
 
 Bpp/Seq/Alphabet/LetterAlphabet.o: Bpp/Seq/Alphabet/LetterAlphabet.cpp.o
@@ -339,7 +339,7 @@ Bpp/Seq/Alphabet/LetterAlphabet.o: Bpp/Seq/Alphabet/LetterAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/LetterAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/LetterAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/LetterAlphabet.i: Bpp/Seq/Alphabet/LetterAlphabet.cpp.i
@@ -348,7 +348,7 @@ Bpp/Seq/Alphabet/LetterAlphabet.i: Bpp/Seq/Alphabet/LetterAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/LetterAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/LetterAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/LetterAlphabet.s: Bpp/Seq/Alphabet/LetterAlphabet.cpp.s
@@ -357,7 +357,7 @@ Bpp/Seq/Alphabet/LetterAlphabet.s: Bpp/Seq/Alphabet/LetterAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/LetterAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/LetterAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/LetterAlphabet.cpp.s
 
 Bpp/Seq/Alphabet/ProteicAlphabet.o: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o
@@ -366,7 +366,7 @@ Bpp/Seq/Alphabet/ProteicAlphabet.o: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/ProteicAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/ProteicAlphabet.i: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i
@@ -375,7 +375,7 @@ Bpp/Seq/Alphabet/ProteicAlphabet.i: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/ProteicAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/ProteicAlphabet.s: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s
@@ -384,7 +384,7 @@ Bpp/Seq/Alphabet/ProteicAlphabet.s: Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/ProteicAlphabet.cpp.s
 
 Bpp/Seq/Alphabet/RNA.o: Bpp/Seq/Alphabet/RNA.cpp.o
@@ -393,7 +393,7 @@ Bpp/Seq/Alphabet/RNA.o: Bpp/Seq/Alphabet/RNA.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/RNA.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.o
 .PHONY : Bpp/Seq/Alphabet/RNA.cpp.o
 
 Bpp/Seq/Alphabet/RNA.i: Bpp/Seq/Alphabet/RNA.cpp.i
@@ -402,7 +402,7 @@ Bpp/Seq/Alphabet/RNA.i: Bpp/Seq/Alphabet/RNA.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/RNA.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.i
 .PHONY : Bpp/Seq/Alphabet/RNA.cpp.i
 
 Bpp/Seq/Alphabet/RNA.s: Bpp/Seq/Alphabet/RNA.cpp.s
@@ -411,7 +411,7 @@ Bpp/Seq/Alphabet/RNA.s: Bpp/Seq/Alphabet/RNA.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/RNA.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/RNA.cpp.s
 .PHONY : Bpp/Seq/Alphabet/RNA.cpp.s
 
 Bpp/Seq/Alphabet/WordAlphabet.o: Bpp/Seq/Alphabet/WordAlphabet.cpp.o
@@ -420,7 +420,7 @@ Bpp/Seq/Alphabet/WordAlphabet.o: Bpp/Seq/Alphabet/WordAlphabet.cpp.o
 
 # target to build an object file
 Bpp/Seq/Alphabet/WordAlphabet.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.o
 .PHONY : Bpp/Seq/Alphabet/WordAlphabet.cpp.o
 
 Bpp/Seq/Alphabet/WordAlphabet.i: Bpp/Seq/Alphabet/WordAlphabet.cpp.i
@@ -429,7 +429,7 @@ Bpp/Seq/Alphabet/WordAlphabet.i: Bpp/Seq/Alphabet/WordAlphabet.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Alphabet/WordAlphabet.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.i
 .PHONY : Bpp/Seq/Alphabet/WordAlphabet.cpp.i
 
 Bpp/Seq/Alphabet/WordAlphabet.s: Bpp/Seq/Alphabet/WordAlphabet.cpp.s
@@ -438,7 +438,7 @@ Bpp/Seq/Alphabet/WordAlphabet.s: Bpp/Seq/Alphabet/WordAlphabet.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Alphabet/WordAlphabet.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Alphabet/WordAlphabet.cpp.s
 .PHONY : Bpp/Seq/Alphabet/WordAlphabet.cpp.s
 
 Bpp/Seq/Container/AbstractSequenceContainer.o: Bpp/Seq/Container/AbstractSequenceContainer.cpp.o
@@ -447,7 +447,7 @@ Bpp/Seq/Container/AbstractSequenceContainer.o: Bpp/Seq/Container/AbstractSequenc
 
 # target to build an object file
 Bpp/Seq/Container/AbstractSequenceContainer.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.o
 .PHONY : Bpp/Seq/Container/AbstractSequenceContainer.cpp.o
 
 Bpp/Seq/Container/AbstractSequenceContainer.i: Bpp/Seq/Container/AbstractSequenceContainer.cpp.i
@@ -456,7 +456,7 @@ Bpp/Seq/Container/AbstractSequenceContainer.i: Bpp/Seq/Container/AbstractSequenc
 
 # target to preprocess a source file
 Bpp/Seq/Container/AbstractSequenceContainer.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.i
 .PHONY : Bpp/Seq/Container/AbstractSequenceContainer.cpp.i
 
 Bpp/Seq/Container/AbstractSequenceContainer.s: Bpp/Seq/Container/AbstractSequenceContainer.cpp.s
@@ -465,7 +465,7 @@ Bpp/Seq/Container/AbstractSequenceContainer.s: Bpp/Seq/Container/AbstractSequenc
 
 # target to generate assembly for a file
 Bpp/Seq/Container/AbstractSequenceContainer.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AbstractSequenceContainer.cpp.s
 .PHONY : Bpp/Seq/Container/AbstractSequenceContainer.cpp.s
 
 Bpp/Seq/Container/AlignedSequenceContainer.o: Bpp/Seq/Container/AlignedSequenceContainer.cpp.o
@@ -474,7 +474,7 @@ Bpp/Seq/Container/AlignedSequenceContainer.o: Bpp/Seq/Container/AlignedSequenceC
 
 # target to build an object file
 Bpp/Seq/Container/AlignedSequenceContainer.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.o
 .PHONY : Bpp/Seq/Container/AlignedSequenceContainer.cpp.o
 
 Bpp/Seq/Container/AlignedSequenceContainer.i: Bpp/Seq/Container/AlignedSequenceContainer.cpp.i
@@ -483,7 +483,7 @@ Bpp/Seq/Container/AlignedSequenceContainer.i: Bpp/Seq/Container/AlignedSequenceC
 
 # target to preprocess a source file
 Bpp/Seq/Container/AlignedSequenceContainer.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.i
 .PHONY : Bpp/Seq/Container/AlignedSequenceContainer.cpp.i
 
 Bpp/Seq/Container/AlignedSequenceContainer.s: Bpp/Seq/Container/AlignedSequenceContainer.cpp.s
@@ -492,7 +492,7 @@ Bpp/Seq/Container/AlignedSequenceContainer.s: Bpp/Seq/Container/AlignedSequenceC
 
 # target to generate assembly for a file
 Bpp/Seq/Container/AlignedSequenceContainer.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/AlignedSequenceContainer.cpp.s
 .PHONY : Bpp/Seq/Container/AlignedSequenceContainer.cpp.s
 
 Bpp/Seq/Container/SequenceContainerTools.o: Bpp/Seq/Container/SequenceContainerTools.cpp.o
@@ -501,7 +501,7 @@ Bpp/Seq/Container/SequenceContainerTools.o: Bpp/Seq/Container/SequenceContainerT
 
 # target to build an object file
 Bpp/Seq/Container/SequenceContainerTools.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.o
 .PHONY : Bpp/Seq/Container/SequenceContainerTools.cpp.o
 
 Bpp/Seq/Container/SequenceContainerTools.i: Bpp/Seq/Container/SequenceContainerTools.cpp.i
@@ -510,7 +510,7 @@ Bpp/Seq/Container/SequenceContainerTools.i: Bpp/Seq/Container/SequenceContainerT
 
 # target to preprocess a source file
 Bpp/Seq/Container/SequenceContainerTools.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.i
 .PHONY : Bpp/Seq/Container/SequenceContainerTools.cpp.i
 
 Bpp/Seq/Container/SequenceContainerTools.s: Bpp/Seq/Container/SequenceContainerTools.cpp.s
@@ -519,7 +519,7 @@ Bpp/Seq/Container/SequenceContainerTools.s: Bpp/Seq/Container/SequenceContainerT
 
 # target to generate assembly for a file
 Bpp/Seq/Container/SequenceContainerTools.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/SequenceContainerTools.cpp.s
 .PHONY : Bpp/Seq/Container/SequenceContainerTools.cpp.s
 
 Bpp/Seq/Container/VectorSequenceContainer.o: Bpp/Seq/Container/VectorSequenceContainer.cpp.o
@@ -528,7 +528,7 @@ Bpp/Seq/Container/VectorSequenceContainer.o: Bpp/Seq/Container/VectorSequenceCon
 
 # target to build an object file
 Bpp/Seq/Container/VectorSequenceContainer.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.o
 .PHONY : Bpp/Seq/Container/VectorSequenceContainer.cpp.o
 
 Bpp/Seq/Container/VectorSequenceContainer.i: Bpp/Seq/Container/VectorSequenceContainer.cpp.i
@@ -537,7 +537,7 @@ Bpp/Seq/Container/VectorSequenceContainer.i: Bpp/Seq/Container/VectorSequenceCon
 
 # target to preprocess a source file
 Bpp/Seq/Container/VectorSequenceContainer.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.i
 .PHONY : Bpp/Seq/Container/VectorSequenceContainer.cpp.i
 
 Bpp/Seq/Container/VectorSequenceContainer.s: Bpp/Seq/Container/VectorSequenceContainer.cpp.s
@@ -546,7 +546,7 @@ Bpp/Seq/Container/VectorSequenceContainer.s: Bpp/Seq/Container/VectorSequenceCon
 
 # target to generate assembly for a file
 Bpp/Seq/Container/VectorSequenceContainer.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSequenceContainer.cpp.s
 .PHONY : Bpp/Seq/Container/VectorSequenceContainer.cpp.s
 
 Bpp/Seq/Container/VectorSiteContainer.o: Bpp/Seq/Container/VectorSiteContainer.cpp.o
@@ -555,7 +555,7 @@ Bpp/Seq/Container/VectorSiteContainer.o: Bpp/Seq/Container/VectorSiteContainer.c
 
 # target to build an object file
 Bpp/Seq/Container/VectorSiteContainer.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.o
 .PHONY : Bpp/Seq/Container/VectorSiteContainer.cpp.o
 
 Bpp/Seq/Container/VectorSiteContainer.i: Bpp/Seq/Container/VectorSiteContainer.cpp.i
@@ -564,7 +564,7 @@ Bpp/Seq/Container/VectorSiteContainer.i: Bpp/Seq/Container/VectorSiteContainer.c
 
 # target to preprocess a source file
 Bpp/Seq/Container/VectorSiteContainer.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.i
 .PHONY : Bpp/Seq/Container/VectorSiteContainer.cpp.i
 
 Bpp/Seq/Container/VectorSiteContainer.s: Bpp/Seq/Container/VectorSiteContainer.cpp.s
@@ -573,7 +573,7 @@ Bpp/Seq/Container/VectorSiteContainer.s: Bpp/Seq/Container/VectorSiteContainer.c
 
 # target to generate assembly for a file
 Bpp/Seq/Container/VectorSiteContainer.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Container/VectorSiteContainer.cpp.s
 .PHONY : Bpp/Seq/Container/VectorSiteContainer.cpp.s
 
 Bpp/Seq/DistanceMatrix.o: Bpp/Seq/DistanceMatrix.cpp.o
@@ -582,7 +582,7 @@ Bpp/Seq/DistanceMatrix.o: Bpp/Seq/DistanceMatrix.cpp.o
 
 # target to build an object file
 Bpp/Seq/DistanceMatrix.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.o
 .PHONY : Bpp/Seq/DistanceMatrix.cpp.o
 
 Bpp/Seq/DistanceMatrix.i: Bpp/Seq/DistanceMatrix.cpp.i
@@ -591,7 +591,7 @@ Bpp/Seq/DistanceMatrix.i: Bpp/Seq/DistanceMatrix.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/DistanceMatrix.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.i
 .PHONY : Bpp/Seq/DistanceMatrix.cpp.i
 
 Bpp/Seq/DistanceMatrix.s: Bpp/Seq/DistanceMatrix.cpp.s
@@ -600,7 +600,7 @@ Bpp/Seq/DistanceMatrix.s: Bpp/Seq/DistanceMatrix.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/DistanceMatrix.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/DistanceMatrix.cpp.s
 .PHONY : Bpp/Seq/DistanceMatrix.cpp.s
 
 Bpp/Seq/Sequence.o: Bpp/Seq/Sequence.cpp.o
@@ -609,7 +609,7 @@ Bpp/Seq/Sequence.o: Bpp/Seq/Sequence.cpp.o
 
 # target to build an object file
 Bpp/Seq/Sequence.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.o
 .PHONY : Bpp/Seq/Sequence.cpp.o
 
 Bpp/Seq/Sequence.i: Bpp/Seq/Sequence.cpp.i
@@ -618,7 +618,7 @@ Bpp/Seq/Sequence.i: Bpp/Seq/Sequence.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Sequence.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.i
 .PHONY : Bpp/Seq/Sequence.cpp.i
 
 Bpp/Seq/Sequence.s: Bpp/Seq/Sequence.cpp.s
@@ -627,7 +627,7 @@ Bpp/Seq/Sequence.s: Bpp/Seq/Sequence.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Sequence.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Sequence.cpp.s
 .PHONY : Bpp/Seq/Sequence.cpp.s
 
 Bpp/Seq/SequenceExceptions.o: Bpp/Seq/SequenceExceptions.cpp.o
@@ -636,7 +636,7 @@ Bpp/Seq/SequenceExceptions.o: Bpp/Seq/SequenceExceptions.cpp.o
 
 # target to build an object file
 Bpp/Seq/SequenceExceptions.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.o
 .PHONY : Bpp/Seq/SequenceExceptions.cpp.o
 
 Bpp/Seq/SequenceExceptions.i: Bpp/Seq/SequenceExceptions.cpp.i
@@ -645,7 +645,7 @@ Bpp/Seq/SequenceExceptions.i: Bpp/Seq/SequenceExceptions.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/SequenceExceptions.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.i
 .PHONY : Bpp/Seq/SequenceExceptions.cpp.i
 
 Bpp/Seq/SequenceExceptions.s: Bpp/Seq/SequenceExceptions.cpp.s
@@ -654,7 +654,7 @@ Bpp/Seq/SequenceExceptions.s: Bpp/Seq/SequenceExceptions.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/SequenceExceptions.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SequenceExceptions.cpp.s
 .PHONY : Bpp/Seq/SequenceExceptions.cpp.s
 
 Bpp/Seq/Site.o: Bpp/Seq/Site.cpp.o
@@ -663,7 +663,7 @@ Bpp/Seq/Site.o: Bpp/Seq/Site.cpp.o
 
 # target to build an object file
 Bpp/Seq/Site.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.o
 .PHONY : Bpp/Seq/Site.cpp.o
 
 Bpp/Seq/Site.i: Bpp/Seq/Site.cpp.i
@@ -672,7 +672,7 @@ Bpp/Seq/Site.i: Bpp/Seq/Site.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/Site.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.i
 .PHONY : Bpp/Seq/Site.cpp.i
 
 Bpp/Seq/Site.s: Bpp/Seq/Site.cpp.s
@@ -681,7 +681,7 @@ Bpp/Seq/Site.s: Bpp/Seq/Site.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/Site.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/Site.cpp.s
 .PHONY : Bpp/Seq/Site.cpp.s
 
 Bpp/Seq/SiteExceptions.o: Bpp/Seq/SiteExceptions.cpp.o
@@ -690,7 +690,7 @@ Bpp/Seq/SiteExceptions.o: Bpp/Seq/SiteExceptions.cpp.o
 
 # target to build an object file
 Bpp/Seq/SiteExceptions.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.o
 .PHONY : Bpp/Seq/SiteExceptions.cpp.o
 
 Bpp/Seq/SiteExceptions.i: Bpp/Seq/SiteExceptions.cpp.i
@@ -699,7 +699,7 @@ Bpp/Seq/SiteExceptions.i: Bpp/Seq/SiteExceptions.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/SiteExceptions.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.i
 .PHONY : Bpp/Seq/SiteExceptions.cpp.i
 
 Bpp/Seq/SiteExceptions.s: Bpp/Seq/SiteExceptions.cpp.s
@@ -708,7 +708,7 @@ Bpp/Seq/SiteExceptions.s: Bpp/Seq/SiteExceptions.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/SiteExceptions.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteExceptions.cpp.s
 .PHONY : Bpp/Seq/SiteExceptions.cpp.s
 
 Bpp/Seq/SiteTools.o: Bpp/Seq/SiteTools.cpp.o
@@ -717,7 +717,7 @@ Bpp/Seq/SiteTools.o: Bpp/Seq/SiteTools.cpp.o
 
 # target to build an object file
 Bpp/Seq/SiteTools.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.o
 .PHONY : Bpp/Seq/SiteTools.cpp.o
 
 Bpp/Seq/SiteTools.i: Bpp/Seq/SiteTools.cpp.i
@@ -726,7 +726,7 @@ Bpp/Seq/SiteTools.i: Bpp/Seq/SiteTools.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/SiteTools.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.i
 .PHONY : Bpp/Seq/SiteTools.cpp.i
 
 Bpp/Seq/SiteTools.s: Bpp/Seq/SiteTools.cpp.s
@@ -735,7 +735,7 @@ Bpp/Seq/SiteTools.s: Bpp/Seq/SiteTools.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/SiteTools.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SiteTools.cpp.s
 .PHONY : Bpp/Seq/SiteTools.cpp.s
 
 Bpp/Seq/StringSequenceTools.o: Bpp/Seq/StringSequenceTools.cpp.o
@@ -744,7 +744,7 @@ Bpp/Seq/StringSequenceTools.o: Bpp/Seq/StringSequenceTools.cpp.o
 
 # target to build an object file
 Bpp/Seq/StringSequenceTools.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.o
 .PHONY : Bpp/Seq/StringSequenceTools.cpp.o
 
 Bpp/Seq/StringSequenceTools.i: Bpp/Seq/StringSequenceTools.cpp.i
@@ -753,7 +753,7 @@ Bpp/Seq/StringSequenceTools.i: Bpp/Seq/StringSequenceTools.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/StringSequenceTools.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.i
 .PHONY : Bpp/Seq/StringSequenceTools.cpp.i
 
 Bpp/Seq/StringSequenceTools.s: Bpp/Seq/StringSequenceTools.cpp.s
@@ -762,7 +762,7 @@ Bpp/Seq/StringSequenceTools.s: Bpp/Seq/StringSequenceTools.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/StringSequenceTools.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/StringSequenceTools.cpp.s
 .PHONY : Bpp/Seq/StringSequenceTools.cpp.s
 
 Bpp/Seq/SymbolList.o: Bpp/Seq/SymbolList.cpp.o
@@ -771,7 +771,7 @@ Bpp/Seq/SymbolList.o: Bpp/Seq/SymbolList.cpp.o
 
 # target to build an object file
 Bpp/Seq/SymbolList.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.o
 .PHONY : Bpp/Seq/SymbolList.cpp.o
 
 Bpp/Seq/SymbolList.i: Bpp/Seq/SymbolList.cpp.i
@@ -780,7 +780,7 @@ Bpp/Seq/SymbolList.i: Bpp/Seq/SymbolList.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/SymbolList.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.i
 .PHONY : Bpp/Seq/SymbolList.cpp.i
 
 Bpp/Seq/SymbolList.s: Bpp/Seq/SymbolList.cpp.s
@@ -789,7 +789,7 @@ Bpp/Seq/SymbolList.s: Bpp/Seq/SymbolList.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/SymbolList.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolList.cpp.s
 .PHONY : Bpp/Seq/SymbolList.cpp.s
 
 Bpp/Seq/SymbolListTools.o: Bpp/Seq/SymbolListTools.cpp.o
@@ -798,7 +798,7 @@ Bpp/Seq/SymbolListTools.o: Bpp/Seq/SymbolListTools.cpp.o
 
 # target to build an object file
 Bpp/Seq/SymbolListTools.cpp.o:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.o
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.o
 .PHONY : Bpp/Seq/SymbolListTools.cpp.o
 
 Bpp/Seq/SymbolListTools.i: Bpp/Seq/SymbolListTools.cpp.i
@@ -807,7 +807,7 @@ Bpp/Seq/SymbolListTools.i: Bpp/Seq/SymbolListTools.cpp.i
 
 # target to preprocess a source file
 Bpp/Seq/SymbolListTools.cpp.i:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.i
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.i
 .PHONY : Bpp/Seq/SymbolListTools.cpp.i
 
 Bpp/Seq/SymbolListTools.s: Bpp/Seq/SymbolListTools.cpp.s
@@ -816,7 +816,7 @@ Bpp/Seq/SymbolListTools.s: Bpp/Seq/SymbolListTools.cpp.s
 
 # target to generate assembly for a file
 Bpp/Seq/SymbolListTools.cpp.s:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.s
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(MAKE) -f src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/build.make src/ext/bpp/bpp-seq/src/CMakeFiles/bpp-seq.dir/Bpp/Seq/SymbolListTools.cpp.s
 .PHONY : Bpp/Seq/SymbolListTools.cpp.s
 
 # Help Target
@@ -915,6 +915,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/qiuyi_li/desktop/ecceTERA-master && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

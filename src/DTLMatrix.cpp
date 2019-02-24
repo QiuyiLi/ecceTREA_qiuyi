@@ -2704,7 +2704,7 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrix::getRootNodes(
     int rootClade = mCladesTrips->mClades.getRootClade();
     int j=0;
     vector<double> values;
-    cout << "keeproot " << keepRoot << endl;
+    // cout << "keeproot " << keepRoot << endl;
     if( keepRoot ){
         j = mSpeciesTree->getRootNode()->getId();
         //cout << "==========" << j << endl;
@@ -2719,7 +2719,7 @@ vector<DTLGraph::MyGraph::Vertex> DTLMatrix::getRootNodes(
     int largestRealId = mSpeciesTree->getLargestRealId();
     // cout << largestRealId << endl;
     for(j=0; j<=largestRealId; j++ ) {
-        cout << "------------" << j << endl;
+        // cout << "------------" << j << endl;
     	// vector<double> values;
         values.clear();
     	if( mSubOpt ) {

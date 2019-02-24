@@ -1,4 +1,4 @@
-# Install script for directory: /Users/qiuyi_li/desktop/ecceTERA-master/src/ext/bpp
+# Install script for directory: /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/qiuyi_li/desktop/ecceTERA-master/src/ext/bpp/bpp-core/src/cmake_install.cmake")
-  include("/Users/qiuyi_li/desktop/ecceTERA-master/src/ext/bpp/bpp-seq/src/cmake_install.cmake")
-  include("/Users/qiuyi_li/desktop/ecceTERA-master/src/ext/bpp/bpp-phyl/src/cmake_install.cmake")
+  include("/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-core/src/cmake_install.cmake")
+  include("/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/cmake_install.cmake")
+  include("/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-phyl/src/cmake_install.cmake")
 
 endif()
 
