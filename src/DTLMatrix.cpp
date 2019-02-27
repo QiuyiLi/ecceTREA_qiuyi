@@ -223,6 +223,7 @@ void DTLMatrix::computeTransferCost(
         int optimumSub = mBestReceiver[state.timeSlice][idUsub];  
         if (optimumSub == -1)
             continue;
+        // cout << "bestReceiver of " << idUsub << " at t=" << state.timeSlice << " = " << optimumSub << endl;
 #ifndef SPEED
         if( mSubOpt ) { // for all VT, do a cost combination
             if( optimumSub == state.idX ) {
@@ -247,7 +248,7 @@ void DTLMatrix::computeTransferCost(
 		// if the bestReceiver is x, we take the second one
 		if( optimumSub == state.idX ) 
 		    optimumSub = mSecondBestReceiver[state.timeSlice][idUsub]; 
-	
+
 		// compute the cost, even for mSubOpt
 		if (optimumSub != -1) {
 		    // if state.idX is in Alpha or not it stays the same
@@ -586,10 +587,18 @@ void DTLMatrix::computeOptimaForCladeSplit(
 #endif
     // maxTS has one node (therefore no transfer) normally, but with
     // ILS, there can be multiple idX at maxTS
-    if( mComputeT && ( state.timeSlice != mMaxTS || mUseILS )) 
+
+    // if( mComputeT && ( state.timeSlice != mMaxTS || mUseILS )) 
+    //     cout << "------------" << state.idX << endl;
+    //     if (state.idX) 
+    //     cout << "13 time = " << state.timeSlice << endl;
+    //     cout << "mMaxTS = " << mMaxTS;
+    //     computeTransferCost(idUl, idUr, costThisSplit, state, 
+    //             optCost, bestSplit );
+    if( mComputeT && state.timeSlice != mMaxTS) {
         computeTransferCost(idUl, idUr, costThisSplit, state, 
                 optCost, bestSplit );
-
+    }
 #ifdef PRINT_COSTS
 cout << "  T: " << optCost << endl;
 #endif
@@ -921,14 +930,17 @@ int DTLMatrix::computeBestReceivers(
     for ( size_t z=0; z<speciesNodeIdsTS.size(); z++ ) {	
 
         int idXf = speciesNodeIdsTS[z];
-
+        // cout << "--------" << idXf << endl;
         // ILS nodes cannot be the source of a transfer
-        if( mSpeciesTree->hasILS() && mSpeciesTree->isILS( idXf ) ) 
+        if( mSpeciesTree->hasILS() && mSpeciesTree->isILS( idXf )) {
+            // cout << "found it when idX = " << idXf << endl; // debugging
             continue;
+        }  
+        if( mSpeciesTree->atRoot( mMaxTS, idXf )) continue;
 
         double spNodeOpt = optVectorTS[z];  // current optimal
-        if( first ) {
-            first = false;
+            if( first ) {
+                first = false;
             bestReceiver = idXf;
             bestCost = spNodeOpt;  
         } else if( COST_GREATER( bestCost, spNodeOpt ) ) {
@@ -977,9 +989,17 @@ int DTLMatrix::computeBestReceivers(
 
     }
 
-    if( first )
-        throw bpp::Exception ("DTLMatrix::computeBestReceivers:"
-                          "best receiver not set" );
+    if( first ){
+        if ( timeSlice == mMaxTS){
+            for (int i = 0; i < speciesNodeIdsTS.size(); i++){
+            mBestReceiver[timeSlice][i] = -1;
+            mSecondBestReceiver[timeSlice][i] = -1;
+            }
+        }
+        else{
+            throw bpp::Exception ("DTLMatrix::computeBestReceivers: best receiver not set" );
+        }   
+    }
 
     return saveBestReceivers( timeSlice, idU, bestReceiver, 
                     secondBestReceiver, bestCost, secondBestCost, otherBests );
@@ -1645,7 +1665,7 @@ void DTLMatrix::calculateMatrixTS(
         }
 
         // check for better opt by transfer
-        if( mComputeTL && opt != 0 && speciesNodeIdsTS.size() > 1 ) {
+        if( mComputeTL && opt != 0 && speciesNodeIdsTS.size() > 1) {
             if( (!mSubOpt && !mTriplets) || mUseILS )
                 computeTransferLossCost( alphaCost, opt, state );
 

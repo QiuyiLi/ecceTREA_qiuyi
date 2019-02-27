@@ -197,6 +197,8 @@ protected:
 
     void computeTransferCost( int idUl, int idUr, double costThisSplit, 
             DTLMatrixState &state, double &optCost, BestSplit &bestSplit );
+    void computeTransferCostAtRoot( int idUl, int idUr, double costThisSplit, 
+            DTLMatrixState &state, double &optCost, BestSplit &bestSplit );
     virtual void computeTransferCostSub( int optimumSub, int idUsub,    
         int idUother, double costThisSplit, DTLMatrixState &state ) {}
     void computeDuplicationCost( int idUl, int idUr, double costThisSplit, 

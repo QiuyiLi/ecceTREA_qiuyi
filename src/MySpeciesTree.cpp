@@ -1723,6 +1723,8 @@ void MySpeciesTree::printIds() {
         if( mIlsSplits.size() > 0 ) {
             cout << " ils splits:";
             BOOST_FOREACH( ilsSplit, mIlsSplits[id] ) {
+                mILSnodes[ilsSplit.first] = true;
+                mILSnodes[ilsSplit.second] = true;
                 cout << " " << ilsSplit.first << "/" << ilsSplit.second;
             }
         }

@@ -227,6 +227,11 @@ public:
             throw bpp::Exception( "MySpeciesTree::isILS: invalid id" );
         return mILSnodes[id];
     }
+    bool atRoot( int maxts, size_t id ) {
+        // cout << "--------" <<mTimeSlices[id] << endl;
+        if( mTimeSlices[id] == maxts ) return(true);
+        else return(false);
+    }
 
     // give all leaves the same depth
     bool computeSubdivision( vector< pair<int,int> > dateMap, 
