@@ -1,4 +1,4 @@
-# Install script for directory: /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src
+# Install script for directory: /Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

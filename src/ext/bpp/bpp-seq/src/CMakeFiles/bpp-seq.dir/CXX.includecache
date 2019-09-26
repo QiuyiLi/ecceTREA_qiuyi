@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.cpp
 AbstractAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 Bpp/Text/TextTools.h
 -
 Bpp/Utils/MapTools.h
@@ -20,11 +20,11 @@ map
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 AlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
 Bpp/Exceptions.h
 -
 string
@@ -34,41 +34,41 @@ vector
 map
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 string
 -
 vector
 -
 AlphabetExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
 AlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
 Bpp/Clonable.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.cpp
 AlphabetExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
 Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
 Bpp/Exceptions.h
 -
 vector
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
 Bpp/Clonable.h
 -
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.cpp
 AlphabetTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
 Bpp/Text/TextTools.h
 -
 ctype.h
@@ -76,51 +76,51 @@ ctype.h
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
 DNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
 RNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
 ProteicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
 DefaultAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
 CodonAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
 RNY.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNY.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNY.h
 BinaryAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/BinaryAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/BinaryAlphabet.h
 Bpp/Numeric/VectorTools.h
 -
 typeinfo
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/BinaryAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/BinaryAlphabet.h
 AbstractAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.cpp
 CodonAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
 Bpp/Text/TextTools.h
 -
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
 WordAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
 NucleicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.cpp
 DNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
 AlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
 Bpp/Text/TextTools.h
 -
 Bpp/Utils/MapTools.h
@@ -128,33 +128,33 @@ Bpp/Utils/MapTools.h
 map
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
 NucleicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
 string
 -
 vector
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.cpp
 DefaultAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
 AlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetState.h
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DefaultAlphabet.h
 LetterAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.cpp
 LetterAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
 string
 -
 vector
@@ -162,13 +162,13 @@ vector
 iostream
 -
 AbstractAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
 LetterAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
 NucleicAlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabetState.h
 map
 -
 iostream
@@ -176,17 +176,17 @@ iostream
 typeinfo
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabetState.h
 string
 -
 bitset
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.cpp
 ProteicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
 ProteicAlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
 Bpp/Text/TextTools.h
 -
 Bpp/Utils/MapTools.h
@@ -194,19 +194,19 @@ Bpp/Utils/MapTools.h
 map
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
 LetterAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/LetterAlphabet.h
 ProteicAlphabetState.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabetState.h
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.cpp
 RNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
 Bpp/Text/TextTools.h
 -
 Bpp/Utils/MapTools.h
@@ -214,111 +214,111 @@ Bpp/Utils/MapTools.h
 map
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
 NucleicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNY.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNY.h
 AbstractAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 NucleicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/NucleicAlphabet.h
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.cpp
 WordAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
 Bpp/Text/TextTools.h
 -
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/WordAlphabet.h
 AbstractAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
 string
 -
 vector
 -
 ../Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.cpp
 AbstractSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
 ../Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 ../Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 SequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
 OrderedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 Bpp/Exceptions.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.cpp
 AlignedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
 Bpp/Text/TextTools.h
 -
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
 ../Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 SiteContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
 OrderedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 VectorSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
 Bpp/Exceptions.h
 -
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 ../Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 SequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
 ../Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 ../Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 SequenceContainerExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
 Bpp/Clonable.h
 -
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
 Bpp/Exceptions.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.cpp
 SequenceContainerTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.h
 VectorSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
 ../Alphabet/CodonAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
 Bpp/Text/TextTools.h
 -
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerTools.h
 string
 -
 vector
@@ -328,17 +328,17 @@ map
 memory
 -
 SequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainer.h
 OrderedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
 ../Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 OrderedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 SequenceContainerExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SequenceContainerExceptions.h
 Bpp/Exceptions.h
 -
 Bpp/Numeric/VectorTools.h
@@ -346,19 +346,19 @@ Bpp/Numeric/VectorTools.h
 string
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.cpp
 VectorSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSequenceContainer.h
 ../Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 ../Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 AbstractSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
 Bpp/Exceptions.h
 -
 algorithm
@@ -366,25 +366,25 @@ algorithm
 vector
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.cpp
 VectorSiteContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.h
 iostream
 -
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/VectorSiteContainer.h
 ../Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 SiteContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/SiteContainer.h
 AbstractSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AbstractSequenceContainer.h
 AlignedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/AlignedSequenceContainer.h
 OrderedSequenceContainer.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Container/OrderedSequenceContainer.h
 Bpp/Numeric/VectorTools.h
 -
 string
@@ -394,11 +394,11 @@ vector
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.cpp
 DistanceMatrix.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/DistanceMatrix.h
 vector
 -
 string
@@ -410,71 +410,71 @@ Bpp/Numeric/VectorExceptions.h
 Bpp/Numeric/Matrix/Matrix.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.cpp
 Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 Alphabet/AlphabetTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
 StringSequenceTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
 Bpp/Text/TextTools.h
 -
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 SymbolList.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
 SequenceExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
 string
 -
 vector
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.cpp
 SequenceExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
 Sequence.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Sequence.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
 Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 Bpp/Exceptions.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.cpp
 Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 StringSequenceTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 SymbolList.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
 SiteExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.cpp
 SiteExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
 Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 Bpp/Text/TextTools.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteExceptions.h
 Bpp/Exceptions.h
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.cpp
 SiteTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.h
 Alphabet/CodonAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/CodonAlphabet.h
 Bpp/Utils/MapTools.h
 -
 Bpp/Numeric/NumTools.h
@@ -484,27 +484,27 @@ Bpp/Numeric/VectorTools.h
 cmath
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SiteTools.h
 SymbolListTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
 Site.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Site.h
 Bpp/Exceptions.h
 -
 map
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.cpp
 StringSequenceTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
 Alphabet/AlphabetTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
 Alphabet/DNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/DNA.h
 Alphabet/RNA.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/RNA.h
 Alphabet/ProteicAlphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/ProteicAlphabet.h
 Bpp/Text/TextTools.h
 -
 Bpp/Numeric/Random/RandomTools.h
@@ -518,13 +518,13 @@ algorithm
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
 Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 Alphabet/AlphabetExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
 SequenceExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SequenceExceptions.h
 Bpp/Exceptions.h
 -
 string
@@ -532,15 +532,15 @@ string
 vector
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.cpp
 SymbolList.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
 StringSequenceTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/StringSequenceTools.h
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
 Alphabet/Alphabet.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/Alphabet.h
 Bpp/Clonable.h
 -
 string
@@ -552,21 +552,21 @@ algorithm
 iostream
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.cpp
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.cpp
 SymbolListTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
 Alphabet/AlphabetTools.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetTools.h
 Bpp/Numeric/Random/RandomTools.h
 -
 algorithm
 -
 
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolListTools.h
 SymbolList.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/SymbolList.h
 Alphabet/AlphabetExceptions.h
-/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
+/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AlphabetExceptions.h
 Bpp/Numeric/VectorExceptions.h
 -
 map

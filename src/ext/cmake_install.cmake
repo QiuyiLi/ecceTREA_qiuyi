@@ -1,4 +1,4 @@
-# Install script for directory: /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext
+# Install script for directory: /Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/boost/cmake_install.cmake")
-  include("/Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/bpp/cmake_install.cmake")
+  include("/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/boost/cmake_install.cmake")
+  include("/Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/bpp/cmake_install.cmake")
 
 endif()
 

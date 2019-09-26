@@ -1,4 +1,4 @@
-# Install script for directory: /Users/qiuyi_li/Desktop/reconciliation/ecceTERA-master_currentwork/src/ext/boost
+# Install script for directory: /Users/qiuyi_li/Desktop/ecceTERA-master 副本/src/ext/boost
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

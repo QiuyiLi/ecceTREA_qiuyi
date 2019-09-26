@@ -6,9 +6,8 @@
 @file ecceTERA.cpp
 @author Celine Scornavacca
 @author Edwin Jacox
-@author Qiuyi Li
-@version 1.2.5 
-@date 26/11/2018
+@version 1.2.4 
+@date 14/09/2016
 
 @section LICENCE
 Copyright or © or Copr. CNRS
@@ -181,7 +180,7 @@ string const gParameters[gParameterCount][4] = {
  {"ils.cost", "double", "1", ""}, //"cost of a incomplete lineage sorting"},
  {"ils.cutoff", "double", "0", ""},
      //"branch length cutoff for incomplete lineage sorting (0 is disabled)"},
- {"ils.max.cluster.size", "int", "999", ""}, // qiuyi
+ {"ils.max.cluster.size", "int", "15", ""},
      //"maximum size of an ils cluster (abort if exceeded)"},
 
 //netTERA
@@ -1252,7 +1251,7 @@ bool minRecsLoop(
                 inEps );
     }
     graph = dtlMatrix->constructGraph( 
-                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
+                gBoolParams.find("verbose")->second );
     notTooBig = graph.countReconciliationNumberAndCheck( inEps,
       gBoolParams.find("keep.only.canonical.reconciliations")->second, 
                 gBoolParams.find("verbose")->second, 
@@ -1286,7 +1285,7 @@ void printReconciliations(
     if( gBoolParams.find("subopt.support")->second ) {
         // make new graph and remove non-optimal nodes
         DTLGraph optGraph = dtlMatrix->constructGraph( 
-                                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
+                                gBoolParams.find("verbose")->second );
         optGraph.pruneNonoptimal();
 
         bool notTooBig = optGraph.countReconciliationNumberAndCheck( 0,
@@ -1414,7 +1413,7 @@ void makeGraph(
     MySpeciesTree *speciesTree ) ///< species tree
 { 
     DTLGraph graph = dtlMatrix->constructGraph( 
-                        gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
+                        gBoolParams.find("verbose")->second );
 //graph.checkScore( gDoubleParams.find("dupli.cost")->second, gDoubleParams.find("HGT.cost")->second, gDoubleParams.find("loss.cost")->second );
 
     // print a non-canonical graph
@@ -1426,7 +1425,6 @@ void makeGraph(
         graph.printGraph( pathName,
                 gBoolParams.find("internal.graph.ids")->second, false );
     }
-
 
     // get number of solutions
     bool notTooBig = graph.countReconciliationNumberAndCheck(
@@ -2086,13 +2084,7 @@ int processSpeciesTree(
     }
 
 speciesTree->printIds();
-// speciesTree->printTreeInfo(); // debugging
-//vector<MySpeciesNode*> allNodes = speciesTree->getNodes();
-    //BOOST_FOREACH( MySpeciesNode *node, allNodes ) 
-        //cout << node->getId() << "\n";
-
-
-
+//speciesTree->printTreeInfo(); // debugging
     if( !gFixedCosts ) {
         // check input date costs
         vector<MySpeciesNode*> nodes = speciesTree->getNodes();
@@ -2122,7 +2114,6 @@ speciesTree->printIds();
         processOtherSpeciesTree( speciesTree, dateMap, changedTimeSlices );
 
     return maxTS;
-    
 }
 
 /**
@@ -2374,7 +2365,7 @@ int main(int args, char ** argv)
 				int sonCount = node->getNumberOfSons();
 				if( sonCount > 2 ) {
 					errStr = "A network node has more than two children";
-					return 0;
+					return false;
 				}
 				for( int i=0; i<sonCount; i++ ) {
 					MySpeciesNode *son = node->getSon( i );
@@ -2738,6 +2729,8 @@ int main(int args, char ** argv)
 					else
 						cout << "Cost of a most parsimonious reconciliation: " 
 						 << bestCost << endl;
+					
+
 					
 					double costMinRec = netAlg.runMinRecon();
                     //netAlg.printRecon();
