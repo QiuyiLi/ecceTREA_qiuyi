@@ -3,6 +3,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 
@@ -52,6 +53,7 @@ an alpha node for transfering from dead (extinct) species nodes.
 #include "MySpeciesTree.h"
 
 #include <iostream>
+#include <fstream>
 #include <queue>
 #include <boost/foreach.hpp>
 
@@ -70,7 +72,7 @@ MySpeciesTree::MySpeciesTree(
         string description, ///< Newick string 
         string &errString, ///< error description
         bool bootstrap ) ///< names are bootstrap values
-    : MyTreeTemplate<MySpeciesNode>(), mHasAlpha(false), mSubdivision(false)
+    : MyTreeTemplate<MySpeciesNode>(), mHasAlpha(false), mSubdivision(false), largestRealId(-1)
 {
     readTree( description, errString, false, bootstrap );
 
@@ -1019,16 +1021,16 @@ void MySpeciesTree::addAlphaForDeadTransfer(
 
     // create new root with old tree and alphas as sons
     MySpeciesNode *oldRootNode = getRootNode();
-// What should this be?
+//  What should this be?
     oldRootNode->setDistanceToFather(1);	
 
     MySpeciesNode *newRootS = new MySpeciesNode(); 
-//    newRootS->getInfos().WGD = false;
+//  newRootS->getInfos().WGD = false;
     newRootS->getInfos().isAlpha = false;
 
     mAlpha = new MySpeciesNode();
     mAlpha->setName("OUTGROUP");
-//    mAlpha->getInfos().WGD = false;
+//  mAlpha->getInfos().WGD = false;
     mAlpha->getInfos().isAlpha = true;
     mAlpha->getInfos().duplicationCost = 0;
     mAlpha->getInfos().hgtCost = hgtCost;
@@ -1664,58 +1666,89 @@ vector< pair<int,int> > MySpeciesTree::getIlsSplits( int id ) {
     return mIlsSplits[id];
 }
 
+int MySpeciesTree::findLargestRealId() {
+    int num = mCorrespondence.size() - 1;
+    for( size_t id=0; id<mCorrespondence.size(); id++ ) {
+        MySpeciesNode *node = mCorrespondence[id];
+        if( node->getId() != (int) id ) {
+            num = id - 1;
+            break;
+        }
+    }
+    largestRealId = num;
+    //cout << "num=" << num << endl;
+    //cout << "largestRealId=" << largestRealId << endl;
+    return num;
+}
+
+
 /**
  * Print all ids and their info.
  */
 void MySpeciesTree::printIds() {
-
+    ofstream myfile;
+    myfile.open("summary", ios::out);
     for( size_t id=0; id<mCorrespondence.size(); id++ ) {
-        cout << id;
+        myfile << id;
         MySpeciesNode *node = mCorrespondence[id];
         if( node == NULL ) 
-// get real ancestor id
-            cout << " ils";
+        // get real ancestor id
+            myfile << " ils";
         else { 
-            if( node->getId() != (int) id )
-                cout << "  fake (" << node->getId() << ")";
-
+            if( node->getId() != (int) id ) {// ils_fake or sub_fake
+                if (mTimeSlices[node->getId()] != mTimeSlices[(int) id] ) {
+                    myfile << " sub_fake (" << node->getId() << ")";
+                } 
+                else{
+                    myfile << " ils_fake (" << node->getId() << ")";
+                }
+            }
             if( isAlpha( id ) ) 
-                cout << " ALPHA";
+                myfile << " ALPHA";
 
             if( mTimeSlices.size() > 0 )
-                cout << " ts=" << mTimeSlices[id];
+                myfile << " ts=" << mTimeSlices[id];
             else
-                cout << " ts=" << node->getInfos().timeSlice;
+                myfile << " ts=" << node->getInfos().timeSlice;
+
+            myfile << " leaves set: ";
+            SpeciesNodeClade = MySpeciesTree::mapSpeciesIdToClades();
+            BOOST_FOREACH( int num, SpeciesNodeClade[id] )
+            myfile << num << ",";
 
             vector< pair<int,int> > splits = getSplits( id );
             pair<int,int> split;
+            //vector<int> setqy; 
             if( splits.size() > 0 ) 
-                cout << " sons:";
+                myfile << " sons:";
             BOOST_FOREACH( split, splits ) 
-                cout << " " << split.first << "," << split.second;
+                myfile << " " << split.first << "," << split.second;
         }
 
         // ils splits
         pair<int,int> ilsSplit; 
         if( mIlsSplits.size() > 0 ) {
-            cout << " ils splits:";
+            myfile << ", ils splits:";
             BOOST_FOREACH( ilsSplit, mIlsSplits[id] ) {
-                cout << " " << ilsSplit.first << "/" << ilsSplit.second;
+                mILSnodes[ilsSplit.first] = true;
+                mILSnodes[ilsSplit.second] = true;
+                myfile << " " << ilsSplit.first << "/" << ilsSplit.second;
             }
+            // myfile << " " << mIlsSplits[id].size();
         }
-
-        cout << endl;
+        myfile << endl;
     }
 
-    for( size_t ts=0; ts<mCorrespondenceTS.size(); ts++ ) {
-        cout << "ts=" << ts << ":";
-        BOOST_FOREACH( int id, mCorrespondenceTS[ts] ) {
-            cout << " " << id;
-            if( isAlpha( id ) )
-                cout << "*";
-        }
-        cout << endl;
-    }
+    // for( size_t ts=0; ts<mCorrespondenceTS.size(); ts++ ) {
+    //     myfile << "ts=" << ts << ":";
+    //     BOOST_FOREACH( int id, mCorrespondenceTS[ts] ) {
+    //         myfile << " " << id;
+    //         if( isAlpha( id ) )
+    //             myfile << "*";
+    //     }
+    //     myfile << endl;
+    // }
+    myfile.close();
 }
 
 
@@ -1839,7 +1872,7 @@ int MySpeciesTree::processClades(
         for( size_t i=0; i<cladeList.size(); i++ ) {
             if( bit & setNum ) {
                 set.push_back( cladeList[i] ); 
-                idxSet.push_back( bit );
+                idxSet.push_back( bit );//qy: ???
             }
             bit *= 2;
         }
@@ -1940,10 +1973,221 @@ int MySpeciesTree::processClades(
                 }
             }
         }
-    }
-
+    }  
     return idX;
 } 
+
+// qy's work
+// the word "clade" below refers to a set of leaves
+// the clade generated by u is the leaf set of the subtree rooted at u
+
+
+// compute intersection of 2 clade sets
+// vector<int> cladeIntersect_1(
+//     vector<int> setA,
+//     vector<int> setB)
+// {
+//     vector<int> intersect;
+//     // cout << setB.size() << endl;
+//     for ( int i=0; i<setA.size(); i++ ){
+//         // cout << i << endl;
+//         for ( int j=0; j<setB.size(); j++ ){
+//             // cout << j << endl;
+//             if (setA[i] == setB[j])
+//             intersect.push_back(setA[i]);
+//         }
+//     }
+//     return intersect;
+// }
+
+
+// compute intersection of 2 clade sets faster
+vector<int> cladeIntersect(
+    vector<int> setA,
+    vector<int> setB)
+{
+    vector<int> intersect;
+    // cout << setB.size() << endl;
+    int i = 0;
+    int j = 0;
+    while ( i<setA.size() && j<setB.size() ){
+        // cout << i << endl;
+        if (setA[i] == setB[j]){
+            intersect.push_back(setA[i]);
+            i++;
+            j++;
+        }
+        else if(setA[i] < setB[j]){
+            i++;
+        }
+        else j++;
+    }
+    return intersect;
+}
+
+vector<int> cladeSortUnion_2(
+    vector<int> setA,
+    vector<int> setB)
+{
+    vector<int> unionSort;
+    int i = 0;
+    int j = 0;
+    while ( i<setA.size() && j<setB.size() ){
+        // cout << i << endl;
+        if(setA[i] < setB[j]){
+            unionSort.push_back(setA[i]);
+            i++;
+        }
+        else{
+            unionSort.push_back(setB[j]);
+            j++;
+        }  
+    }
+    while(i<setA.size()){
+        unionSort.push_back(setA[i]);
+        i++;
+    }
+    while(j<setB.size()){
+        unionSort.push_back(setB[j]);
+        j++;
+    }
+    return unionSort;
+}
+
+
+// creat a vector in which the i-th entry of the vector refers to
+// the set of clades corresponding to the species node with id i
+vector< vector<int> > MySpeciesTree::mapSpeciesIdToClades()
+{
+    // map id to set of leaves ids
+    vector< vector<int> > Clades (mCorrespondence.size()); 
+    // compute backwords in time
+    BOOST_FOREACH( int id, mCorrespondenceTS[0] ) 
+        Clades[id].push_back(id);
+    for( size_t ts=1; ts<mCorrespondenceTS.size(); ts++ ) {
+        BOOST_FOREACH( int id, mCorrespondenceTS[ts] ) {
+            // assume binary 
+            pair<int,int> splits = getSplits( id )[0]; 
+            vector<int> Clades_1 = Clades[splits.first];
+            Clades[id] = Clades_1;
+            if(splits.second != -1){
+                vector<int> Clades_2 = Clades[splits.second];
+                Clades[id] = cladeSortUnion_2(Clades_1, Clades_2);
+                // BOOST_FOREACH( int leafId, Clades_2 ) 
+                //     Clades[id].push_back(leafId); 
+            }
+        }
+    } 
+    SpeciesNodeClade = Clades;
+    return Clades;
+}
+
+
+// given ils node id (as defined in the previous code, refering to mCorrespondence)
+// output the clade set corresponding to the id
+vector<int> MySpeciesTree::getIlsCladById(int ilsNodeId)
+{
+    vector<int> ilsClades;
+    pair<int,int> ilsSplits = mIlsSplits[ilsNodeId][0];
+    ilsClades = SpeciesNodeClade[ilsSplits.first];
+    ilsClades = cladeSortUnion_2(SpeciesNodeClade[ilsSplits.first], SpeciesNodeClade[ilsSplits.second]);
+    // BOOST_FOREACH( int leafId, SpeciesNodeClade[ilsSplits.second] ) {
+    //     ilsClades.push_back(leafId);
+    // }
+    return ilsClades;
+}
+
+
+
+// count the total number of units of ils cost
+// times unit cost specied in DTLMatrix.cpp to get the full cost
+double MySpeciesTree::ilsTripCostAux(
+        vector<int> ilsClade,
+        vector<int> ilsClade_l,
+        vector<int> ilsClade_r)
+{
+    MySpeciesNode *node = LCA( ilsClade );
+    int idX = node->getId();
+    // debugging
+    // cout << "-------------lca--------------" << endl;
+    // cout << idX << endl;
+    vector< pair<int,int> > sons = getSplits( idX );
+    pair<int,int> binarySplits = sons[0]; // assume binary
+    int childId_l = binarySplits.first;
+    int childId_r = binarySplits.second;
+    double cost = 0;
+    double cost_l = 0;
+    double cost_r = 0;
+    vector<int> clade_l = SpeciesNodeClade[childId_l];
+    vector<int> clade_r = SpeciesNodeClade[childId_r];
+    // debugging
+    // cout << "-------------clade_l--------------" << endl;
+    // BOOST_FOREACH( int leaf, clade_l )
+    //     cout << leaf << " ";
+    // cout << " end" << endl;
+    
+    // cout << "-------------clade_r--------------" << endl;
+    // BOOST_FOREACH( int leaf, clade_r )
+    //     cout << leaf << endl;
+
+    // cout << "intersect_ll: " << endl;
+    // BOOST_FOREACH( int leafId, cladeIntersect(ilsClade_l, clade_l) ){
+    //     cout << leafId << endl;
+    // }
+    // cout << "intersect_rl: " << endl;
+    // BOOST_FOREACH( int leafId, cladeIntersect(ilsClade_r, clade_l) ){
+    //     cout << leafId << endl;
+    // }
+    // cout << "intersect_lr: " << endl;
+    // BOOST_FOREACH( int leafId, cladeIntersect(ilsClade_l, clade_r) ){
+    //     cout << leafId << endl;
+    // }
+    // cout << "intersect_rr: " << endl;
+    // BOOST_FOREACH( int leafId, cladeIntersect(ilsClade_r, clade_r) ){
+    //     cout << leafId << endl;
+    // }
+
+    if (cladeIntersect(ilsClade_l, clade_l).size()>0
+        && cladeIntersect(ilsClade_r, clade_l).size()>0){
+        cost_l = ilsTripCostAux(cladeIntersect(ilsClade,clade_l),
+                                cladeIntersect(ilsClade_l,clade_l),
+                                cladeIntersect(ilsClade_r,clade_l));       
+        }
+    else{
+        cost_l = 0;}
+    if (cladeIntersect(ilsClade_l, clade_r).size()>0
+        && cladeIntersect(ilsClade_r, clade_r).size()>0){
+        cost_r = ilsTripCostAux(cladeIntersect(ilsClade,clade_r),
+                                cladeIntersect(ilsClade_l,clade_r),
+                                cladeIntersect(ilsClade_r,clade_r));       
+        }
+    else{
+        cost_r = 0;}
+    cost = cost_l + cost_r + 1; // count one more unit of ils cost
+    return cost;
+}
+
+// count the total number of units of ils cost
+// times unit cost specied in DTLMatrix.cpp to get the full cost
+vector<double> MySpeciesTree::ilsTripCost(
+    int ilsNodeId) // dated clades, possibly fake, with 2 real splits
+{
+    vector<int> ilsClade = getIlsCladById(ilsNodeId);
+    vector< pair<int,int> > ilsSplits = mIlsSplits[ilsNodeId];
+    vector<double> cost;
+
+    for (int i=0; i<ilsSplits.size(); i++){
+        pair<int,int> ilsSplit = ilsSplits[i];
+        vector<int> ilsClade_l = SpeciesNodeClade[ilsSplit.first];
+        vector<int> ilsClade_r = SpeciesNodeClade[ilsSplit.second];
+        cost[i] = ilsTripCostAux(ilsClade, ilsClade_l, ilsClade_r);
+    }
+    return cost;    
+}
+
+//qy's work finished here
+
+
 
 
 /**
@@ -2010,6 +2254,7 @@ void MySpeciesTree::computeSpeciesCladesAndSplits(
         int maxClusterSize, ///< maximum cluster size, else abort
         bool verbose ) ///< print cluster sizes if true
 {
+    
     // initialize structures for leaves
     vector<MySpeciesNode*> allNodes = getNodes();
 	int nodeCount = allNodes.size();
@@ -2025,9 +2270,10 @@ void MySpeciesTree::computeSpeciesCladesAndSplits(
     mTimeSlices.clear();
     mTimeSlices.resize( nodeCount );
 
-    vector<int> stats( 100 );
+    vector<int> stats(100);
     computeSpeciesCladesAndSplitsAux( getRootNode(), ilsCutoff, 
                                       maxClusterSize, stats );
+    // cout << "BBBBBBBBB" << endl;
     if( verbose ) {
         for( size_t i=0; i<stats.size(); i++ ) 
             if( stats[i] != 0 )

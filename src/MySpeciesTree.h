@@ -6,6 +6,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 
@@ -93,11 +94,13 @@ private:
     MySpeciesNode *mAlpha; ///< original alpha node
     vector<bool> mILSnodes;    ///< tracks ils fake nodes
     vector<int> mTimeSlices; ///< time slices mapping by postOrder id
+    vector< vector<int> > SpeciesNodeClade; // map id to set of leaves ids
+    int largestRealId;
 
     vector< vector< pair<int,int> > > mSplits; 
         ///< all splits from species tree, by clade
     vector< vector< pair<int,int> > > mIlsSplits; 
-        ///< all ILS splits (not in species tree), by clade
+        ///< all ILS splits (not in species tree), by clade //qy
         
     bool checkBootstrapValues( MySpeciesNode *node = NULL, 
                                double parentBS = -1 );
@@ -118,13 +121,20 @@ private:
     bool isComplete( MySpeciesNode *lca, vector<int> &set );
     int processClades( vector<int> &cladeList );
     vector<int> computeSpeciesCladesAndSplitsAux( MySpeciesNode *node,
-                    double ilsCutoff, int maxClusterSize, vector<int> &stats );
+    double ilsCutoff, int maxClusterSize, vector<int> &stats );
+    vector<int> getIlsCladById(int ilsNodeId);
+
+
+
+
 public:
 
     /** empty tree for Strale */
     MySpeciesTree() 
-       : mHasAlpha(false), mSubdivision(false)
+       : mHasAlpha(false), mSubdivision(false), largestRealId(-1)
     {} 
+    vector< vector<int> > mapSpeciesIdToClades();
+    int findLargestRealId();
 
 
     /**
@@ -133,7 +143,7 @@ public:
  	MySpeciesTree(
             MySpeciesNode &root ) ///< root node
         : MyTreeTemplate<MySpeciesNode>(& root),
-        mHasAlpha(false), mSubdivision(false)
+        mHasAlpha(false), mSubdivision(false), largestRealId(-1)
     {}  
 
 
@@ -146,6 +156,18 @@ public:
     MySpeciesTree( const MySpeciesTree &tree ) 
         : MyTreeTemplate<MySpeciesNode>( tree ) { }
 
+    vector<int> getTimeSlices(){
+        return mTimeSlices;
+    }
+
+    vector< vector<int> > getSpeciesNodeClade(){
+        return SpeciesNodeClade;
+    }
+
+    int getLargestRealId(){
+        if(largestRealId == -1) findLargestRealId();
+        return largestRealId;
+    }
 
     void assignPostOrderIds();
     static MySpeciesTree* readMySpeciesTree( const char *treePathChar,
@@ -163,6 +185,8 @@ public:
     int getNumberOfIds();
     vector< pair<int,int> > getSplits( int id );
     void printIds();
+    vector<double> ilsTripCost( int ilsNodeId);
+    double ilsTripCostAux(  vector<int> ilsClade, vector<int> ilsClade_l, vector<int> ilsClade_r); //qy
 
     /** get realPostOrder field */
     int getRPO( 
@@ -202,6 +226,11 @@ public:
         if( id > mILSnodes.size() )
             throw bpp::Exception( "MySpeciesTree::isILS: invalid id" );
         return mILSnodes[id];
+    }
+    bool atRoot( int maxts, size_t id ) {
+        // cout << "--------" <<mTimeSlices[id] << endl;
+        if( mTimeSlices[id] == maxts ) return(true);
+        else return(false);
     }
 
     // give all leaves the same depth

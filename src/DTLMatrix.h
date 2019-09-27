@@ -6,6 +6,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 Copyright or © or Copr. CNRS
@@ -196,6 +197,8 @@ protected:
 
     void computeTransferCost( int idUl, int idUr, double costThisSplit, 
             DTLMatrixState &state, double &optCost, BestSplit &bestSplit );
+    void computeTransferCostAtRoot( int idUl, int idUr, double costThisSplit, 
+            DTLMatrixState &state, double &optCost, BestSplit &bestSplit );
     virtual void computeTransferCostSub( int optimumSub, int idUsub,    
         int idUother, double costThisSplit, DTLMatrixState &state ) {}
     void computeDuplicationCost( int idUl, int idUr, double costThisSplit, 
@@ -309,11 +312,13 @@ public:
                int maxTS, double weight, bool mUseBestSplits,
                double ilsCost );
 
+
     DTLMatrix() {
         mUseBestSplits = false;
     }
     virtual ~DTLMatrix();
 
+       // vector< vector<int> > SpeciesNodeClade; //qy
     // the main functions
     void calculateMatrix( bool verbose=false, int maxIterations=1, 
             bool updateWeightOnly=false, int dated=2,

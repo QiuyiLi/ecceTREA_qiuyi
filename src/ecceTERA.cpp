@@ -6,8 +6,9 @@
 @file ecceTERA.cpp
 @author Celine Scornavacca
 @author Edwin Jacox
-@version 1.2.4 
-@date 14/09/2016
+@author Qiuyi Li
+@version 1.2.5 
+@date 26/11/2018
 
 @section LICENCE
 Copyright or © or Copr. CNRS
@@ -180,7 +181,7 @@ string const gParameters[gParameterCount][4] = {
  {"ils.cost", "double", "1", ""}, //"cost of a incomplete lineage sorting"},
  {"ils.cutoff", "double", "0", ""},
      //"branch length cutoff for incomplete lineage sorting (0 is disabled)"},
- {"ils.max.cluster.size", "int", "15", ""},
+ {"ils.max.cluster.size", "int", "100", ""}, // qiuyi
      //"maximum size of an ils cluster (abort if exceeded)"},
 
 //netTERA
@@ -1080,14 +1081,13 @@ DTLMatrix *createAndRunMatrix(
                     gDoubleParams.find("weight.amalgamation")->second, 
                     useBestSplits,
                     gDoubleParams.find("ils.cost")->second );
-
         // run calculation
         dtlMatrix->calculateMatrix( 
                 gBoolParams.find("verbose")->second, 
                 gIntParams.find("max.iterations")->second, 
                 gBoolParams.find("fix.dtl.costs")->second,
                 gIntParams.find("dated")->second );
-
+        // cout << "!!!!!!!!!" << endl;
         if( gFixedCosts && gBoolParams.find("verbose")->second ) {
 // count events needs to be updated to handle variable costs
             int duplications = 0;
@@ -1251,7 +1251,7 @@ bool minRecsLoop(
                 inEps );
     }
     graph = dtlMatrix->constructGraph( 
-                gBoolParams.find("verbose")->second );
+                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
     notTooBig = graph.countReconciliationNumberAndCheck( inEps,
       gBoolParams.find("keep.only.canonical.reconciliations")->second, 
                 gBoolParams.find("verbose")->second, 
@@ -1285,7 +1285,7 @@ void printReconciliations(
     if( gBoolParams.find("subopt.support")->second ) {
         // make new graph and remove non-optimal nodes
         DTLGraph optGraph = dtlMatrix->constructGraph( 
-                                gBoolParams.find("verbose")->second );
+                                gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
         optGraph.pruneNonoptimal();
 
         bool notTooBig = optGraph.countReconciliationNumberAndCheck( 0,
@@ -1413,7 +1413,7 @@ void makeGraph(
     MySpeciesTree *speciesTree ) ///< species tree
 { 
     DTLGraph graph = dtlMatrix->constructGraph( 
-                        gBoolParams.find("verbose")->second );
+                        gBoolParams.find("verbose")->second, gBoolParams.find("gene.origination.species.root")->second );
 //graph.checkScore( gDoubleParams.find("dupli.cost")->second, gDoubleParams.find("HGT.cost")->second, gDoubleParams.find("loss.cost")->second );
 
     // print a non-canonical graph
@@ -1425,6 +1425,7 @@ void makeGraph(
         graph.printGraph( pathName,
                 gBoolParams.find("internal.graph.ids")->second, false );
     }
+
 
     // get number of solutions
     bool notTooBig = graph.countReconciliationNumberAndCheck(
@@ -1530,6 +1531,7 @@ void run(
     DTLMatrix *dtlMatrix = createAndRunMatrix( backtrackTree, speciesTree,
                                     cladesAndTripartitions, maxTS, 
                                     changedTimeSlices, inEps );
+    
     double bestCost = dtlMatrix->getBestCost(
                 gBoolParams.find("gene.origination.species.root")->second );
     if( printCost ) {
@@ -1558,7 +1560,6 @@ void run(
                  << gDoubleParams.find("HGT.cost")->second<< "," 
                  << gDoubleParams.find("loss.cost")->second << ",,";
     }
-
     // matrix - only print once
     string matrixFileStr = gStringParams.find("print.matrix.file")->second;
     if( matrixFileStr != "none" ) {
@@ -1955,6 +1956,7 @@ int processSpeciesTree(
         vector<MyGeneTree*> geneTrees, ///< the gene tree
         vector<int> &changedTimeSlices ) ///< return changed time slices
 {
+    // cout << "AAAAAAAAAAAA" << endl;
     // parse data changing parameters
     vector< pair<int, int> > dateMap;
     string errStr = "empty error";
@@ -2067,24 +2069,29 @@ int processSpeciesTree(
         }
         speciesTree->assignNoSubdivisionTimeSlices();
     }
-
     // assign ids (correspondance)
     speciesTree->assignPostOrderIds();
-
     int maxTS = 0;
+    
     if( gDoubleParams.find("ils.cutoff")->second > 0 ) {
         speciesTree->computeSpeciesCladesAndSplits( 
             gDoubleParams.find("ils.cutoff")->second,
             gIntParams.find("ils.max.cluster.size")->second,
             gBoolParams.find("verbose")->second );
+        // gIntParams.find("ils.max.cluster.size")->second
         maxTS = speciesTree->getRootNode()->getInfos().timeSlice;
     } else {
         // create vector of nodes by time slices
         maxTS = speciesTree->setVectorTimeSlices();
     }
-
 speciesTree->printIds();
-//speciesTree->printTreeInfo(); // debugging
+// speciesTree->printTreeInfo(); // debugging
+//vector<MySpeciesNode*> allNodes = speciesTree->getNodes();
+    //BOOST_FOREACH( MySpeciesNode *node, allNodes ) 
+        //cout << node->getId() << "\n";
+
+
+
     if( !gFixedCosts ) {
         // check input date costs
         vector<MySpeciesNode*> nodes = speciesTree->getNodes();
@@ -2112,8 +2119,9 @@ speciesTree->printIds();
     // process another species file
     if( gStringParams.find("other.species.file")->second != "none" ) 
         processOtherSpeciesTree( speciesTree, dateMap, changedTimeSlices );
-
+    // cout << "22222222222222" << endl;
     return maxTS;
+    
 }
 
 /**
@@ -2256,7 +2264,6 @@ int main(int args, char ** argv)
 				if( gBoolParams.find("verbose")->second ) 
 					cout << geneTrees.size() << " gene trees" << endl;
 			}
-
 			// process the species tree
 			vector<int> changedTimeSlices;
 			int maxTS = processSpeciesTree( speciesTree, geneTrees, 
@@ -2275,7 +2282,7 @@ int main(int args, char ** argv)
 		             << "tree, has only one leaf, skipped\n";
 		            continue;
 		        }
-		        
+		        // cout << "55555555" << endl;
 				// do each tree individually if this isn't an amalgamation
 				if( !gBoolParams.find("amalgamate")->second ) {
 					vector<MyGeneTree*> singleGeneTree;
@@ -2291,21 +2298,21 @@ int main(int args, char ** argv)
 						backtrackTree = true;
 						constructGraph = false;  // not this time, after
 					}
-
 					// run the calculations
 					if( geneTrees.size() == 1 )
 						counter = 0; // don't add extension
+                    // cout << "6666666" << endl;
 					run( false, speciesTree, singleGeneTree, maxTS, 
 						 changedTimeSlices, counter, constructGraph, 
 						 backtrackTree, true, bootstrapGeneTree );
 					if( gBoolParams.find("verbose")->second )
 						cout << endl; // add a gap in output
 				}
-
+                cout << "7777777777" << endl;
 				if( bootstrapGeneTree != NULL )
 					delete bootstrapGeneTree;
 			}
-
+            
 			if( !gBoolParams.find("ale")->second && geneTrees.size() == 0 ) {
 				cout << "No gene trees found." << endl;
 				exit(1);
@@ -2320,7 +2327,6 @@ int main(int args, char ** argv)
 				return 0;
 			} 
 
-		
 			// run the amalgamation
 			if( gBoolParams.find("amalgamate")->second ) {
 				run( true, speciesTree, geneTrees, maxTS, 
@@ -2355,7 +2361,7 @@ int main(int args, char ** argv)
 
 			speciesNetwork->assignNetworkPostOrderIds();
 					
-
+            
 			vector<MySpeciesNode*> allNodes = speciesNetwork->getNodes();
 		
 			string errStr;
@@ -2365,7 +2371,7 @@ int main(int args, char ** argv)
 				int sonCount = node->getNumberOfSons();
 				if( sonCount > 2 ) {
 					errStr = "A network node has more than two children";
-					return false;
+					return 0;
 				}
 				for( int i=0; i<sonCount; i++ ) {
 					MySpeciesNode *son = node->getSon( i );
@@ -2394,7 +2400,6 @@ int main(int args, char ** argv)
 			}
 	
 	
-			
 			allNodes = speciesNetwork->getNodes();
 			
 					BOOST_FOREACH( MySpeciesNode *node, allNodes ) {
@@ -2457,7 +2462,7 @@ int main(int args, char ** argv)
 				//////////////////////////////////////////////////////////
 				// Gene trees
 				//////////////////////////////////////////////////////////
-		
+
 				if( !geneTree->restrictTreeToASetOfTaxa( 
 					taxaNamesSpecies, gStringParams.find("char.sep")->second[0],
 					gBoolParams.find("verbose")->second )  )
@@ -2706,7 +2711,7 @@ int main(int args, char ** argv)
 					//}
 
 
-				
+                    
 					CladesAndTripartitions *cladesAndTripartitions= new CladesAndTripartitions(gStringParams.find("char.sep")->second[0], *(geneTree) );
 				
 				
@@ -2717,20 +2722,16 @@ int main(int args, char ** argv)
 					vector<int> changedTimeSlices;
 					DTLMatrix*dtlMatrix = createAndRunMatrix( false, speciesNetwork,
 											cladesAndTripartitions, maxTS, 
-											changedTimeSlices, inEps );
-										
-				
+											changedTimeSlices, inEps );				
 					double bestCost = dtlMatrix->getBestCost(
                             gBoolParams.find("gene.origination.species.root")
-                                        ->second );
+                                        ->second );	
 					if( bestCost == std::numeric_limits<double>::max() ) 
 						cout << "Cost of a most parsimonious reconciliation: OVERFLOW" 
 						 << endl;
 					else
 						cout << "Cost of a most parsimonious reconciliation: " 
 						 << bestCost << endl;
-					
-
 					
 					double costMinRec = netAlg.runMinRecon();
                     //netAlg.printRecon();

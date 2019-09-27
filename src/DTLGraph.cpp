@@ -3,6 +3,7 @@
 @file
 @author Celine Scornavacca
 @author Edwin Jacox
+@author Qiuyi Li
 
 @section LICENCE
 
@@ -227,7 +228,7 @@ double DTLGraph::countSubReconciliations() {
                         -= mGraph.properties(son).recNumber;
         }
     }
-
+    // cout << "rootSum=" << rootSum << endl;
     return rootSum;
 }
 
@@ -364,10 +365,6 @@ void DTLGraph::computeSupportDiscoverVertex(
         return; // no point in continuing
 
     computeR( z ); // compute r for grandchildren
-//  * The r value
-//  * is the recNumber for valid grandchildren if the z has
-//  * one child. If z has two children, r is the product
-//  * of valid cousins (calculated in validRecNumber).
 
     int rootCount = mRootVertices.size();
     MyGraph::adjacency_vertex_range_t sons = mGraph.getAdjacentVertices(z);
@@ -719,6 +716,7 @@ void DTLGraph::bestScoreFinishVertex(
     if( mScoredProblem != 5 || mGraph.properties(z).name[0] != 'S'  
              || mGraph.properties(z).name[1] != '_' )
     {
+        // cout << "support=" << mGraph.properties(z).support << endl;
         mGraph.properties(z).score = mGraph.properties(z).support
                                    + args->mScoreMod;
     }
@@ -740,6 +738,7 @@ void DTLGraph::bestScoreFinishVertex(
 
     double sMax = 0;
     bool first = true;
+
     BOOST_FOREACH( MyGraph::Vertex eventSon1, eventSons1) {
     
         double sonScore1 = mGraph.properties(eventSon1).score;
@@ -763,8 +762,8 @@ void DTLGraph::bestScoreFinishVertex(
             }
         }
     }
-
     mGraph.properties(z).score += sMax;
+    //cout << "maxScore=" << sMax << endl;
 }
 
  
@@ -936,7 +935,7 @@ string DTLGraph::createNameWithExternalIds(
 
 
 
-/**
+/** ???
  * Print the edges of the graph (pairs of vertices) with the number
  * of reconciliations each vertex is in (support).
  */
@@ -1375,6 +1374,7 @@ double DTLGraph::getBestScore(
     double scoreMod = 0;
     if( problem > 2 && problem < 5 )
         scoreMod = -getNumberSolutions()/2;
+        // cout << "scoreMod=" << scoreMod << endl;
 
     if( mScoredProblem != problem ) { // else already done
 
@@ -1696,7 +1696,7 @@ bool DTLGraph::getScoredReconciliation(
         vector< vector<DTLGraph::MyGraph::Vertex> > &reconciliation,
             ///< The reconciliation as a list of clades (id_u) with associated 
             ///< specie nodes (id_x).
-        bool random )   ///< Create a randome reconciliation if true.
+        bool random )   ///< Create a random reconciliation if true.
 {
     // score the graph if necessary
     if( !random && mScoredProblem != problem ) 
@@ -1742,7 +1742,7 @@ bool DTLGraph::getScoredReconciliation(
                     }
                 } else {
                     double score = mGraph.properties(eventSon).score;
-                    if( problem == 5 ) {
+                    if( problem == 5 ) { // ???
                         int u, x, d, t, l;
                         double cost;
                         getVertexIdentfiers( root, u, x, cost, d, t, l );
@@ -2190,7 +2190,7 @@ void DTLGraph::orthologyOutput(
 }
 
 
-/**
+/**???
  * Print one or all problem reconciliations to a file.
  */
 void DTLGraph::printReconciliation( 
@@ -2287,7 +2287,7 @@ void DTLGraph::printReconciliation(
 
         if( curProblemStr != "random" )
             curProblemStr += " median";
-        cout << curProblemStr << " score: " << score 
+        cout << curProblemStr << " problem=" << problem << " score: " << score 
              << otherStr << endl;
     }  
 }
@@ -3010,10 +3010,11 @@ vector<string> DTLGraph::printReconciliationAux(
         // start with clade name
         string cladeString;
         bool isLeaf = mCladesTrips->mClades.isLeaf( idU );
-        if( isLeaf )
-            cladeString = mCladesTrips->mClades.getLeafName(idU) + ":";
-        else
-            cladeString = bpp::TextTools::toString( pOrd ) + ":";
+        // if( isLeaf )
+        //     cladeString = mCladesTrips->mClades.getLeafName(idU) + ":";
+        // else
+        //     cladeString = bpp::TextTools::toString( pOrd ) + ":";
+        cladeString = bpp::TextTools::toString( pOrd ) + "\t";
 
         pair<int,int> cladeSplit = mCladesTrips->getCladeSplit( idU, 0 );
         int idUl = cladeSplit.first;
@@ -3026,9 +3027,9 @@ vector<string> DTLGraph::printReconciliationAux(
                 cout << idU << " not set" << endl;
                 throw bpp::Exception("DTLGraph::printReconciliationAux: "
                         "firstEvents not set" );
-            }
-            cladeString += firstEvents[idU];
-            semicolon = ";";
+            } 
+            // cladeString += firstEvents[idU];
+            // semicolon = ";";
         }
 
         // create event strings
@@ -3058,7 +3059,7 @@ vector<string> DTLGraph::printReconciliationAux(
                                             eventSupports );
             cladeString += semicolon + eventStr;
             eventsAdded++;
-            semicolon = ";"; // separate following events
+            semicolon = "\n" + bpp::TextTools::toString( pOrd ) + "\t"; // separate following events
 
             // last split is first split for children
             if( idUl != -1 ) {
@@ -3070,19 +3071,23 @@ vector<string> DTLGraph::printReconciliationAux(
             continue; // no events, skip
 
         // add child clades
-        if( !isLeaf ) {
-            if( mCladesTrips->mClades.isLeaf( idUl ) )
-                cladeString += ":" + mCladesTrips->mClades.getLeafName( idUl );
-            else
-                cladeString += ":" 
-                            + bpp::TextTools::toString( cladeToPOrd[idUl] );
+        // if( !isLeaf ) {
+        //     // if( mCladesTrips->mClades.isLeaf( idUl ) )
+        //     //     cladeString += ":" + mCladesTrips->mClades.getLeafName( idUl );
+        //     // else
+        //     //     cladeString += ":" 
+        //     //                 + bpp::TextTools::toString( cladeToPOrd[idUl] );
+        //     cladeString += ":" 
+        //                 + bpp::TextTools::toString( cladeToPOrd[idUl] );
 
-            if( mCladesTrips->mClades.isLeaf( idUr ) )
-                cladeString += "," + mCladesTrips->mClades.getLeafName( idUr );
-            else
-                cladeString += "," 
-                            + bpp::TextTools::toString( cladeToPOrd[idUr] );
-        }
+        //     // if( mCladesTrips->mClades.isLeaf( idUr ) )
+        // //         cladeString += "," + mCladesTrips->mClades.getLeafName( idUr );
+        // //     else
+        // //         cladeString += "," 
+        // //                     + bpp::TextTools::toString( cladeToPOrd[idUr] );
+        //     cladeString += "," 
+        //                 + bpp::TextTools::toString( cladeToPOrd[idUr] );
+        // }
         outStrings[pOrd] = cladeString;
     }
 
@@ -3096,10 +3101,11 @@ string DTLGraph::getStringId(
     int idX ) ///< species postorder id
 {
     MySpeciesNode *node = mSpeciesTree->getNodeById( idX );
-    if( node->isLeaf() ) 
-        return "'" + node->getName() + "'";
-    else  
-        return bpp::TextTools::toString( node->getInfos().realPostOrder );
+    // if( node->isLeaf() ) 
+    //     return "'" + node->getName() + "'";
+    // else  
+    //     return bpp::TextTools::toString( node->getInfos().realPostOrder );
+    return bpp::TextTools::toString( node->getInfos().realPostOrder );
 }
 
 /**
@@ -3166,9 +3172,10 @@ string DTLGraph::getEventString(
         eventOutName += eventName[i];
     }
 
-    // output post order species id, rather than internal species id
+    // output post order species id, rather than internal species id // ???
     int idX = mGraph.properties(reconciliation[idU][z]).id_x; 
     string idXstr = getStringId( idX );
+    // string idXstr = to_string(idX);
 
     double support;
     if( eventSupports.size() == 0 ) {
@@ -3197,20 +3204,24 @@ string DTLGraph::getEventString(
             if( mSpeciesTree->isAlpha( lostSonX ) )
                 lostId = "-1";
             else
-                lostId = getStringId( lostSonX );
+                //lostId = getStringId( lostSonX );
+                lostId = to_string( lostSonX );
 
             string keptId;
             if( mSpeciesTree->isAlpha( keptSonX ) )
                 keptId = "-1";
             else
-                keptId = getStringId( keptSonX );
+                //keptId = getStringId( keptSonX );
+                keptId = to_string( keptSonX );
 
             auxStr = lostId + "," + keptId;
         } else if( eventOutName == "TL" ) {
-            auxStr = idXstr + "," + getStringId( keptSonX );
+            //auxStr = idXstr + "," + getStringId( keptSonX );
+            auxStr = idXstr + "," + to_string( keptSonX );
         } else if( eventOutName == "TLFD" ) {
             idXstr = "-1";
-            auxStr = "-1," + getStringId( keptSonX );
+            //auxStr = "-1," + getStringId( keptSonX );
+            auxStr = "-1," + to_string( keptSonX );
         } else if( eventOutName == "TLTD" ) {
             auxStr = idXstr + ",-1";
         } else {
@@ -3228,15 +3239,18 @@ string DTLGraph::getEventString(
         int idXr = mGraph.properties(vr).id_x; 
         if( eventOutName == "S" || eventOutName == "T" || eventOutName == "I" ) 
         {
-            auxStr = getStringId( idXl ) + "," + getStringId( idXr );
+            //auxStr = getStringId( idXl ) + "," + getStringId( idXr );
+            auxStr = to_string( idXl ) + "," + to_string( idXr );
         } else {
             if( eventOutName == "TFD" )
                 idXstr = "-1";
             // transfer to/from dead, replace alpha (dead) by -1
             if( mSpeciesTree->isAlpha( idXl ) )
-                auxStr = "-1," + getStringId( idXr );
+                //auxStr = "-1," + getStringId( idXr );
+                auxStr = "-1," + to_string( idXr );
             else if( mSpeciesTree->isAlpha( idXr ) )
-                auxStr = getStringId( idXl ) + ",-1";
+                //auxStr = getStringId( idXl ) + ",-1";
+                auxStr = to_string( idXl ) + ",-1";
             else 
                 throw bpp::Exception("DTLGraph::getEventString: alpha not in "
                                 "TTD or TFD" );
@@ -3252,8 +3266,9 @@ string DTLGraph::getEventString(
         throw bpp::Exception("DTLGraph::getEventString: unknown event" );
     }
 
-    string eventString = idXstr + "," + eventOutName + "," + auxStr
-                       + "@" + supportStr;
+    string eventString = idXstr + "\t" + eventOutName + "\t";
+                            // + auxStr
+                            // + "@" + supportStr;
     return eventString;
 }
 
@@ -3562,7 +3577,7 @@ bool DTLGraph::printHandleRecon(
 
     if( printThisOne ) {
         if( !args->mSylvxFormat ) 
-            *(args->mOutFile) << reconNumber
+            *(args->mOutFile) << ">" << reconNumber
                 << " =============================================" << endl;
         for( int i = reconStrings.size()-1; i>=0; i-- ) {
             if( reconStrings[i] != "" ) 

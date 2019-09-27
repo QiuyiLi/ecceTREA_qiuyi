@@ -76,6 +76,7 @@ void MyMatrix::setDim( int d1, int d2 )
  */
 double MyMatrix::getValue( int j, int z ) 
 {
+    cout << j << "," << z << endl; 
     return costs[j][z];
 }
 
