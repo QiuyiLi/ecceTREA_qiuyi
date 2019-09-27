@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-core/src/Bpp/App/ApplicationTools.cpp
 ApplicationTools.h
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-core/src/Bpp/App/ApplicationTools.h
@@ -790,3 +791,5 @@ string
 vector
 -
 
+=======
+>>>>>>> 72501fca5277cc6c180fc37e25c51709dd2ff612

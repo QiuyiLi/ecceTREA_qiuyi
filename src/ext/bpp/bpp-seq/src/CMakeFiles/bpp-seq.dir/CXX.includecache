@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.cpp
 AbstractAlphabet.h
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-seq/src/Bpp/Seq/Alphabet/AbstractAlphabet.h
@@ -832,3 +833,5 @@ map
 vector
 -
 
+=======
+>>>>>>> 72501fca5277cc6c180fc37e25c51709dd2ff612

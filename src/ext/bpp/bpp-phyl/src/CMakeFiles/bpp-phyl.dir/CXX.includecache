@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-phyl/src/Bpp/Phyl/BipartitionList.cpp
 BipartitionList.h
 /Users/qiuyi_li/Desktop/HIDTL/ecceTREA_qiuyi copy/src/ext/bpp/bpp-phyl/src/Bpp/Phyl/BipartitionList.h
@@ -1970,3 +1971,5 @@ Bpp/Numeric/VectorExceptions.h
 map
 -
 
+=======
+>>>>>>> 72501fca5277cc6c180fc37e25c51709dd2ff612
